@@ -1,0 +1,10 @@
+# Independent app repos — each versioned in its own repo (own remote)
+/boojy-design/
+/boojy-notes/
+/boojy-audio/
+/boojy-web/
+/boojy-cloud/
+
+# macOS
+.DS_Store
+**/.DS_Store
