@@ -31,7 +31,7 @@ Creative software has become expensive, closed, and extractive — Adobe Creativ
 These are unchanged from the original vision and still hold:
 
 1. **Free to create** — every app free forever, including commercial use; no feature gating.
-2. **Open-source after v1.0** — apps go open once feature-complete and stable. **License undecided: MIT vs. GNU GPL (Blender-style) — still being chosen.**
+2. **Open-source after v1.0** — apps go open once feature-complete and stable. **Apps: GPLv3** (copyleft, Blender-style). **Boojy Cloud stays private** (AGPLv3 if ever opened).
 3. **Privacy-first** — no telemetry by default, no ads, no data selling.
 4. **Human + AI development** — built by Tyr Bujac with AI tooling assisting; all creative and architectural decisions are human-made.
 5. **Accessibility** — lightweight apps, intuitive UI (GarageBand/iMovie-level approachability), free for education, offline-capable.
@@ -119,11 +119,11 @@ If support is offered, it stays **optional and ethical**: a single paid cloud ti
 
 ## 8. Licensing
 
-- **Apps:** open-source after each reaches v1.0. **License still undecided — MIT vs. GNU GPL (Blender-style).** MIT = maximum freedom, anyone can reuse/relicense including in closed products; GPL = copyleft, forks must stay open. Decision pending.
-- **Boojy Cloud:** leaning proprietary/closed for now (it's the one paid service and is tied to specific infra). If opened later, **AGPLv3** is the fit, not MIT/GPL — see reasoning below. Apps can also work with third-party storage (Google Drive, Dropbox, self-hosted) regardless.
+- **Apps: GPLv3** (decided). Copyleft, Blender-style — forks must stay open. The apps (Audio, Notes, Design, Web) carry a `LICENSE` of GPLv3; already-published commits stay under whatever they shipped (relicensing is forward-only). MIT was considered and rejected — copyleft keeps the suite and its forks open.
+- **Boojy Cloud:** **private** for now (it's the one paid service and is tied to specific infra). If opened later, **AGPLv3** is the fit, not GPL — see reasoning below.
 - **Trademarks:** "Boojy" name and logo protected; forks allowed under different names.
 
-> **Note on Cloud:** the apps' license (MIT or GPL) is independent of the server's. Apps talk to Cloud over a network API, and network use isn't "distribution," so a GPL app does **not** force the server open. You can freely mix e.g. GPL/MIT apps with a closed or AGPL backend.
+> **Note on Cloud:** the apps' GPLv3 license is independent of the server's. Apps talk to Cloud over a network API, and network use isn't "distribution," so a GPLv3 app does **not** force the server open. You can freely mix GPLv3 apps with a closed or AGPL backend.
 
 ---
 
