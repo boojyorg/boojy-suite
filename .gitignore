@@ -8,6 +8,9 @@
 # Private docs (sensitive — strategy, financials). On disk, not tracked.
 /docs/private/
 
+# Internal strategy / competitor teardowns / superseded planning — local only, not published.
+/archive/
+
 # macOS
 .DS_Store
 **/.DS_Store
