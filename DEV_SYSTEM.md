@@ -57,21 +57,10 @@ suite-root `CLAUDE.md`. This is just the per-file roster:
 
 ### Target skeleton
 
-```
-<repo>/
-├── CLAUDE.md                 # local-only authoritative rules (suite-wide process → root CLAUDE.md)
-├── dreams.md                 # §1 only (active target + milestone checklist)
-├── README.md
-├── CHANGELOG.md              # only if it ships releases
-├── FEATURES.md               # optional — user-facing apps only
-├── docs/                     # ROADMAP · BACKLOG · FEATURE_TRACKER (apps) · ARCHITECTURE · archive · reviews
-└── .claude/
-    ├── settings.json         # compactPrompt + PostToolUse hooks
-    ├── settings.local.json   # GITIGNORED
-    ├── rules/                # one topic per file; paths: frontmatter where file-specific
-    ├── hooks/post-edit-validation.sh   # gate only
-    └── skills/…
-```
+The canonical file/folder layout — every slot, which are always-present vs stub-allowed, and the
+naming conventions (`SPEC-`, `IDEAS.md`, dated reviews) — lives in **[`REPO_TEMPLATE.md`](REPO_TEMPLATE.md)**.
+One home for scaffold structure: read it when standing up a new repo. This section covers only the one
+thing that varies per repo — the gate.
 
 ### The one variable: the gate
 

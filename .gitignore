@@ -5,6 +5,9 @@
 /boojy-web/
 /boojy-cloud/
 
+# Private docs (sensitive — strategy, financials). On disk, not tracked.
+/docs/private/
+
 # macOS
 .DS_Store
 **/.DS_Store
