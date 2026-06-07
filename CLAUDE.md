@@ -45,6 +45,12 @@ Update `CHANGELOG.md` as you go — entries under a top `## Unreleased` section,
 Never commit straight to `main`/`master`. Branch → green the repo's gates locally → PR. **CI is the
 gate**, not just local tests. Don't bypass pre-commit hooks (`--no-verify`).
 
+**Stacked PRs:** GitHub's "MERGED" badge means *merged into its base*, which for a stacked PR is the
+previous PR's branch — **not** master. When PR1 of a stack merges, **delete its branch** so GitHub
+retargets the rest of the stack to master; before treating any stacked PR as landed, verify with
+`gh pr view N --json baseRefName` + `git merge-base --is-ancestor <merge-sha> origin/master`.
+(The v0.6 drum-kit editor sat "merged" but stranded for three releases this way.)
+
 ## Context-hygiene gate
 
 When session context crosses ~50%, pause active loops, summarise the current task + files touched,
