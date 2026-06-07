@@ -2,7 +2,7 @@
 
 > **Tagline:** Creativity without limits.
 > **Mission:** Make professional creative tools free, accessible, and ethical for everyone.
-> **Status as of:** 2026-05-29 · **Supersedes:** *Boojy Suite (Vision Document)* and *Boojy Suite (Early Preview)*
+> **Status as of:** 2026-06-07 · **Supersedes:** *Boojy Suite (Vision Document)* and *Boojy Suite (Early Preview)*
 
 ---
 
@@ -41,9 +41,9 @@ These are unchanged from the original vision and still hold:
 
 ## 3. Product suite — actual lineup & status
 
-| App | What it is | Replaces | Status (2026-05-29) | Tech |
+| App | What it is | Replaces | Status (2026-06-07) | Tech |
 |---|---|---|---|---|
-| **Boojy Audio** | Cross-platform DAW: multi-track audio/MIDI, mixing, automation, VST3, export | GarageBand, Logic, Audition | **Active dev — v0.3.0 (alpha).** Highest priority. | Flutter (UI) + Rust engine via FFI |
+| **Boojy Audio** | Cross-platform DAW: multi-track audio/MIDI, mixing, automation, VST3, export | GarageBand, Logic, Audition | **Active dev — v0.5.4 (alpha), v0.6 "Sound" in progress.** Highest priority. | Flutter (UI) + Rust engine via FFI |
 | **Boojy Design** | Web image editor (raster + the former Draw feature set): paint, shapes, text, layers, transform, `.design` save | Photoshop, Affinity, Procreate, Canva | **MVP complete — v0.4.0.** Konva engine landed. | Web (TS), Konva canvas |
 | **Boojy Notes** | Markdown note-taking, block editor, wikilinks, cloud sync | Notion, Obsidian (lightweight) | **In progress — v0.4.0.** Active. | Web + Electron, Supabase + R2 |
 | **Boojy Video** | Video editing with integrated motion graphics | Premiere, Final Cut, Resolve | **Backlog — not started.** | TBD |
@@ -65,7 +65,7 @@ These are unchanged from the original vision and still hold:
 
 | Incumbent | Boojy replacement | Status |
 |---|---|---|
-| Audition / Logic / GarageBand | Boojy Audio | In active dev (v0.3.0) |
+| Audition / Logic / GarageBand | Boojy Audio | In active dev (v0.5.4) |
 | Photoshop / Procreate / Canva | Boojy Design | MVP complete (v0.4.0) |
 | Notion / Obsidian | Boojy Notes | In progress (v0.4.0) |
 | Premiere / After Effects | Boojy Video | Backlog |
@@ -79,7 +79,7 @@ These are unchanged from the original vision and still hold:
 Rather than fixed month numbers, priorities are now ordered by current state:
 
 **Now**
-- **Boojy Audio** — push v0.3.x toward Beta/v0.5; it's the highest-priority app.
+- **Boojy Audio** — v0.5 reached; push the v0.6 "Sound" milestone and the road to Beta. Highest-priority app.
 - **Boojy Notes** — continue toward a stable release; polish the core editor and sync.
 - **Boojy Design** — MVP is done; stabilise and begin scoping the **animation feature**.
 
