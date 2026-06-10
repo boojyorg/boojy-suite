@@ -25,6 +25,14 @@ A critical rule must never live *only* in auto-memory.
 - **auto-memory** — incidental cross-session learnings; skim `/memory` after a big refactor.
 - **`git log`** — the history. No session ledger.
 
+## Weekly planning ritual
+
+Suite-wide weekly targets live in `~/Documents/Vault/Boojy/SUITE_STATUS.md` ("This Week" — one-line,
+app-prefixed, disposable). The ritual is **`/weekly`** (suite-root skill): Sunday, review the past
+week together (Claude brings the git facts, Tyr the judgment), then co-draft next week's list.
+**If a session starts on Sunday or Monday and the "This Week" heading is from a past week, suggest
+running `/weekly`.** Don't auto-run it — the ritual needs Tyr's input.
+
 ## Changelog workflow
 
 Update `CHANGELOG.md` as you go — entries under a top `## Unreleased` section, categorised
