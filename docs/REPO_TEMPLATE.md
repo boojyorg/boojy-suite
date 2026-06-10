@@ -5,8 +5,8 @@ slots are always-present vs stub-allowed, and the naming conventions. Scaffold a
 (e.g. *"set up a new repo per `REPO_TEMPLATE.md`"*).
 
 This doc describes **structure only**. It *references* content rather than restating it, so it can't
-drift: the shared process/conventions live in the suite-root [`CLAUDE.md`](CLAUDE.md), the strategy
-and licensing decision in the [Vision doc](<Boojy Suite — Vision (2026 Refresh).md>), and the
+drift: the shared process/conventions live in the suite-root [`CLAUDE.md`](../CLAUDE.md), the strategy
+and licensing decision in [`VISION.md`](../VISION.md), and the
 docs-system shape + per-repo gate in [`DEV_SYSTEM.md`](DEV_SYSTEM.md).
 
 ## The skeleton

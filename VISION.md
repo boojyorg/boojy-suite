@@ -2,7 +2,7 @@
 
 > **Tagline:** Creativity without limits.
 > **Mission:** Make professional creative tools free, accessible, and ethical for everyone.
-> **Status as of:** 2026-06-07 · **Supersedes:** *Boojy Suite (Vision Document)* and *Boojy Suite (Early Preview)*
+> **Status as of:** 2026-06-10 · **Supersedes:** *Boojy Suite (Vision Document)* and *Boojy Suite (Early Preview)*
 
 ---
 
@@ -22,7 +22,7 @@ The original vision (Nov 2025 – Feb 2026) described a seven-app lineup that no
 
 Creative software has become expensive, closed, and extractive — Adobe Creative Cloud at ~£66/month, paywalled "pro" tiers, proprietary file formats, and telemetry that monetises your work. For students, hobbyists, and independent creators that's prohibitive.
 
-**Boojy Suite** is a creative ecosystem that is free forever (no subscriptions, paywalls, or trials), open-source after each app hits v1.0, privacy-first (no telemetry or ads by default), cross-platform, and ethical — revenue is reinvested into development rather than extracted from users.
+**Boojy Suite** is a creative ecosystem that is free forever (no subscriptions, paywalls, or trials), open-source (GPLv3, developed in public repos), privacy-first (no telemetry or ads by default), cross-platform, and ethical — revenue is reinvested into development rather than extracted from users.
 
 ---
 
@@ -31,7 +31,7 @@ Creative software has become expensive, closed, and extractive — Adobe Creativ
 These are unchanged from the original vision and still hold:
 
 1. **Free to create** — every app free forever, including commercial use; no feature gating.
-2. **Open-source after v1.0** — apps go open once feature-complete and stable. **Apps: GPLv3** (copyleft, Blender-style). **Boojy Cloud stays private** (AGPLv3 if ever opened).
+2. **Open source, GPLv3** — the app repos are public on GitHub (`boojyorg`) and developed in the open; v1.0 marks feature-complete and stable, not the moment the source opens. **Apps: GPLv3** (copyleft, Blender-style). **Boojy Cloud stays private** (AGPLv3 if ever opened). *(Originally "open-source after v1.0"; the repos went public during development in mid-2026.)*
 3. **Privacy-first** — no telemetry by default, no ads, no data selling.
 4. **Human + AI development** — built by Tyr Bujac with AI tooling assisting; all creative and architectural decisions are human-made.
 5. **Accessibility** — lightweight apps, intuitive UI (GarageBand/iMovie-level approachability), free for education, offline-capable.
@@ -41,7 +41,7 @@ These are unchanged from the original vision and still hold:
 
 ## 3. Product suite — actual lineup & status
 
-| App | What it is | Replaces | Status (2026-06-07) | Tech |
+| App | What it is | Replaces | Status (2026-06-10) | Tech |
 |---|---|---|---|---|
 | **Boojy Audio** | Cross-platform DAW: multi-track audio/MIDI, mixing, automation, VST3, export | GarageBand, Logic, Audition | **Active dev — v0.5.4 (alpha), v0.6 "Sound" in progress.** Highest priority. | Flutter (UI) + Rust engine via FFI |
 | **Boojy Design** | Web image editor (raster + the former Draw feature set): paint, shapes, text, layers, transform, `.design` save | Photoshop, Affinity, Procreate, Canva | **MVP complete — v0.4.0.** Konva engine landed. | Web (TS), Konva canvas |
@@ -111,16 +111,16 @@ Windows, Linux, and tablet/mobile builds remain a "between v0.5 and v1.0" goal p
 
 **Low priority — Boojy is primarily a personal-use project.** There's no revenue ambition driving the roadmap; the apps are built for personal use and shared freely. A business model exists only to cover costs if/when others use the apps, not as a goal in itself.
 
-If support is offered, it stays **optional and ethical**: a single paid cloud tier plus donations. Direct (website) billing is preferred over App Store billing to avoid the platform cut.
+If support is ever needed, it stays **optional and ethical** — donations, not subscriptions. (A paid **"Boojy Orbit"** cloud tier was previously planned and has been **dropped** as of 2026-06-09: Boojy is about free and open-source software, not subscriptions.)
 
-**Boojy Cloud — one paid tier for now: "Boojy Orbit."** Targeting ~10 GB storage (could change). A free tier likely sits below it. No multi-tier Plus/Pro/Max ladder for the moment — just Orbit.
+**Boojy Cloud is free-only.** Optional sync, free up to ~500 MB, no paid tier. It powers Boojy Notes today and rolls out to other apps over time. Storage is absorbed as a personal-project cost; the levers if that ever stops scaling are a soft cap or donations — **not** a subscription.
 
 ---
 
 ## 8. Licensing
 
 - **Apps: GPLv3** (decided). Copyleft, Blender-style — forks must stay open. The apps (Audio, Notes, Design, Web) carry a `LICENSE` of GPLv3; already-published commits stay under whatever they shipped (relicensing is forward-only). MIT was considered and rejected — copyleft keeps the suite and its forks open.
-- **Boojy Cloud:** **private** for now (it's the one paid service and is tied to specific infra). If opened later, **AGPLv3** is the fit, not GPL — see reasoning below.
+- **Boojy Cloud:** **private** for now (tied to specific infra). If opened later, **AGPLv3** is the fit, not GPL — see reasoning below.
 - **Trademarks:** "Boojy" name and logo protected; forks allowed under different names.
 
 > **Note on Cloud:** the apps' GPLv3 license is independent of the server's. Apps talk to Cloud over a network API, and network use isn't "distribution," so a GPLv3 app does **not** force the server open. You can freely mix GPLv3 apps with a closed or AGPL backend.
@@ -129,7 +129,7 @@ If support is offered, it stays **optional and ethical**: a single paid cloud ti
 
 ## 9. Brand
 
-Authoritative brand notes live in their own files alongside this doc (`Documents/Projects/boojy/`): see *Boojy Colors*, *Boojy Logos*, and *Boojy name* (platform handles: boojy.org, @boojy on YouTube, @boojyorg elsewhere, GitHub `boojyorg`).
+Authoritative brand facts (colors, logo conventions, name & handles: boojy.org, @boojy on YouTube, @boojyorg elsewhere, GitHub `boojyorg`) live in **[`docs/BRAND.md`](docs/BRAND.md)**; early ideation is archived locally in `archive/brand/`.
 
 ---
 
