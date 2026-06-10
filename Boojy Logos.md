@@ -1,6 +1,0 @@
-- 🎧 **Boojy Audio** → simple headphone. headphone goes on top of d headband over io and finish with an inverse d.
-- ✏️ **Boojy Draw** → pencil tip. thought the 'w' or another letter could look lik was draw with a pencil.
-- 🖋️ **Boojy Design** → pen nib / smooth curve. thought maybe could have pen facing up and the i could look like was drawn with pen.
--  🎬 **Boojy Video** → play triangle. triangle inside last 'o'
-- ➡️ **Boojy Animate** → motion arrow (your image)
-- ☁️ **Boojy Cloud** → single curved cloud

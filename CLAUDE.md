@@ -4,8 +4,7 @@ Process and conventions shared by **all** Boojy repos. Inherited by every repo u
 `~/Documents/Projects/boojy/` (Claude Code walks up and loads this alongside the repo's own
 `CLAUDE.md`).
 
-- **Strategy / "why"** (product lineup, roadmap, principles, licensing) → *Boojy Suite — Vision
-  (2026 Refresh)*, not here.
+- **Strategy / "why"** (product lineup, roadmap, principles, licensing) → `VISION.md`, not here.
 - **App-specific architecture, stack, gates, gotchas** → that repo's own `CLAUDE.md` +
   `.claude/rules/`.
 - **This file** = the conventions that were being re-stated in every repo. One home each.
