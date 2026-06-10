@@ -1,23 +1,25 @@
 ---
 name: weekly
-description: Sunday weekly review + planning ritual for the Boojy suite. Reviews the past week across all repos (facts from git), collects Tyr's reflections, then co-drafts next week's "This Week" list into the vault's SUITE_STATUS.md. Invoke on Sunday (or whenever the This Week list is from a past week).
+description: Sunday weekly review + planning ritual for the Boojy suite. Reviews the past week across all repos (facts from git), collects Tyr's reflections, then co-drafts next week's "This Week" list into SUITE_STATUS.md (suite root, public). Invoke on Sunday (or whenever the This Week list is from a past week).
 ---
 
 # /weekly — suite review & planning ritual
 
 Two-sided weekly loop: **Claude brings the facts** (what actually happened across the repos),
 **Tyr brings the judgment** (how the week felt, where the priority pull is). Both propose targets;
-Tyr approves; the result replaces "This Week" in `~/Documents/Vault/Boojy/SUITE_STATUS.md`.
+Tyr approves; the result replaces "This Week" in the suite root's `SUITE_STATUS.md`.
 
 The list is **disposable** — the review lives in this conversation, not in an archive. Targets are
-one-line pointers; detail stays in each repo's `dreams.md` / `ROADMAP.md`.
+one-line pointers; detail stays in each repo's `dreams.md` / `ROADMAP.md`. ⚠️ The doc is **public**
+(tracked in boojyorg/boojy-suite): nothing sensitive or personal goes in it — that belongs in
+`docs/private/` or the vault.
 
 ## Procedure
 
 ### 1. Gather (automatic — no questions yet)
 
-- Run `boojy-web/scripts/suite-status.sh` to refresh the snapshot.
-- Read `~/Documents/Vault/Boojy/SUITE_STATUS.md` — the outgoing "This Week" list and week heading.
+- Run `scripts/suite-status.sh` to refresh the snapshot.
+- Read the suite root's `SUITE_STATUS.md` — the outgoing "This Week" list and week heading.
 - Compute the week boundaries: outgoing week's Monday, and next Monday (`date -v+mon +%Y-%m-%d`).
 - Per repo (boojy-audio, boojy-design, boojy-notes, boojy-web, boojy-cloud, suite root):
   - `git log --since "<outgoing Monday>" --oneline` on the default branch *and* the current branch
@@ -53,5 +55,7 @@ reality moved. Do **not** archive the old list.
 
 ### 6. Close
 
-If the week surfaced durable cross-session learnings, save them to auto-memory. Do not commit or
-push anything in the app repos as part of this ritual — it reads; it only writes the vault doc.
+Commit the updated `SUITE_STATUS.md` directly to `main` in the suite-umbrella repo and push —
+this one file is the documented exception to the branch→PR rule (root `CLAUDE.md`). If the week
+surfaced durable cross-session learnings, save them to auto-memory. Do not commit or push anything
+in the **app** repos as part of this ritual — there it only reads.

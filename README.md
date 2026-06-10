@@ -19,7 +19,9 @@ The live site is **[boojy.org](https://boojy.org)**.
 | **[boojy-web](https://github.com/boojyorg/boojy-web)** | Source for [boojy.org](https://boojy.org) (Astro static) | — | **Live** |
 | **boojy-cloud** | Supabase backend — powers Notes sync today; free-only, no paid tier | — | **Dormant** (private repo) |
 
-*Status updated on releases; each repo's `CHANGELOG.md` is authoritative if this table trails.*
+*Status updated on releases; for live week-to-week state see [`SUITE_STATUS.md`](SUITE_STATUS.md)
+(auto-refreshed snapshot + the current weekly targets). Each repo's `CHANGELOG.md` is authoritative
+if this table trails.*
 
 ## How this folder works
 
@@ -32,6 +34,7 @@ its own remote). This README is an orientation map, **not** how-to-run-an-app do
 | Looking for… | Go to |
 |--------------|-------|
 | **Strategy / why** (lineup, roadmap, principles, licensing) | [`VISION.md`](VISION.md) |
+| **Live status & weekly targets** (auto snapshot + This Week) | [`SUITE_STATUS.md`](SUITE_STATUS.md) |
 | **Shared rules** every repo inherits (process, branch discipline, memory model) | [`CLAUDE.md`](CLAUDE.md) |
 | **Brand** (colors, logos, name & handles) | [`docs/BRAND.md`](docs/BRAND.md) |
 | **Dev-system** (how the docs/hooks are shaped + repo setup) | [`docs/DEV_SYSTEM.md`](docs/DEV_SYSTEM.md) |

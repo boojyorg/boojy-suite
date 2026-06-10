@@ -27,11 +27,12 @@ A critical rule must never live *only* in auto-memory.
 
 ## Weekly planning ritual
 
-Suite-wide weekly targets live in `~/Documents/Vault/Boojy/SUITE_STATUS.md` ("This Week" — one-line,
-app-prefixed, disposable). The ritual is **`/weekly`** (suite-root skill): Sunday, review the past
-week together (Claude brings the git facts, Tyr the judgment), then co-draft next week's list.
-**If a session starts on Sunday or Monday and the "This Week" heading is from a past week, suggest
-running `/weekly`.** Don't auto-run it — the ritual needs Tyr's input.
+Suite-wide weekly targets live in the suite root's `SUITE_STATUS.md` ("This Week" — one-line,
+app-prefixed, disposable; regenerated snapshot via `scripts/suite-status.sh`). The ritual is
+**`/weekly`** (suite-root skill): Sunday, review the past week together (Claude brings the git
+facts, Tyr the judgment), then co-draft next week's list. **If a session starts on Sunday or Monday
+and the "This Week" heading is from a past week, suggest running `/weekly`.** Don't auto-run it —
+the ritual needs Tyr's input. ⚠️ The file is public — nothing sensitive goes in it.
 
 ## Changelog workflow
 
@@ -51,6 +52,9 @@ Update `CHANGELOG.md` as you go — entries under a top `## Unreleased` section,
 
 Never commit straight to `main`/`master`. Branch → green the repo's gates locally → PR. **CI is the
 gate**, not just local tests. Don't bypass pre-commit hooks (`--no-verify`).
+
+**One exception:** the suite-umbrella repo's `SUITE_STATUS.md` (a generated/weekly status doc with
+no gates behind it) may be committed directly to `main` — typically by the `/weekly` ritual.
 
 **Stacked PRs:** GitHub's "MERGED" badge means *merged into its base*, which for a stacked PR is the
 previous PR's branch — **not** master. When PR1 of a stack merges, **delete its branch** so GitHub
