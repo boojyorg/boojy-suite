@@ -43,3 +43,9 @@ its own remote). This README is an orientation map, **not** how-to-run-an-app do
 
 Starting a new app (e.g. Boojy Video)? Scaffold its repo from
 [`docs/REPO_TEMPLATE.md`](docs/REPO_TEMPLATE.md).
+
+## Contributing
+
+The suite is in **Early Access** and isn't accepting pull requests yet — contributions will open
+as each app reaches its v1.0 release. **Bug reports and feedback are very welcome** — see
+[`CONTRIBUTING.md`](CONTRIBUTING.md).
