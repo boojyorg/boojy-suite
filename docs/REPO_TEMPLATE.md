@@ -18,6 +18,7 @@ docs-system shape + per-repo gate in [`DEV_SYSTEM.md`](DEV_SYSTEM.md).
 ├── dreams.md                 # §1 only — active engineering target + milestone checklist
 ├── CHANGELOG.md              # once the app ships releases (not before)
 ├── LICENSE                   # GPLv3 for apps (see Vision §8); boojy-cloud stays private
+├── CONTRIBUTING.md           # Early Access contribution policy (see Vision §8) — public repos only
 ├── .claude/
 │   ├── settings.json         # compactPrompt + PostToolUse hooks
 │   ├── settings.local.json   # GITIGNORED — personal settings
