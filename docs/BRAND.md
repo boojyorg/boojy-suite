@@ -24,6 +24,33 @@ here — this file records decisions, not options.)
   macOS but break on the Linux build — rename in two steps or via `git mv`.
 - Suite mark: `boojy-logo.svg` / `Boojy_Image_Logo.png` (favicon derives from these).
 
+## Top bar / app chrome
+
+Every editor app shares one top-bar grammar. Two interactive targets, split by **scope** — the user
+never has to guess which to click:
+
+| Target | Position | Click opens | Holds |
+|--------|----------|-------------|-------|
+| **Logo** (`▲app` wordmark) | top-left | **App menu** (dropdown) | Start screen / All projects · New · Open recent · Preferences · About · Help |
+| **Project name** (`Untitled`) | right of logo | **Document menu** (dropdown) | Rename (→ inline edit) · Save · Save As · Save version · Project settings · Export · Close |
+
+Principles:
+- **App-level vs. document-level** is the dividing line. App-global actions live under the logo;
+  anything scoped to the open document lives under its name.
+- ⚠️ **The logo opens a menu — never a bare navigation jump.** "Start screen / All projects" is the
+  *first item* in that menu, so a stray click can't throw the user out of their project.
+- The project name shows a **dirty dot** (`•`) when there are unsaved changes. Rename happens inline
+  (the name flips to an editable field), reached via the document menu — not on a raw click.
+
+Per-app notes:
+- **Multi-document apps (Notes)** have no single project-name slot — the tab bar owns document
+  switching. They still follow the logo → app-menu rule (Notes' Settings shortcut folds in as
+  Preferences).
+- Platform chrome (e.g. Audio's macOS title strip showing `Project — Boojy Audio`) is decoration,
+  not an interaction target.
+
+Repo-specific implementation gotchas (not the contract) go in each repo's `.claude/rules/top-bar.md`.
+
 ## Name & handles (the brand spine)
 
 | Platform | Handle |
