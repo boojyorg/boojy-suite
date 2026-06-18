@@ -2,7 +2,7 @@
 
 > **Tagline:** Creativity without limits.
 > **Mission:** Make professional creative tools free, accessible, and ethical for everyone.
-> **Status as of:** 2026-06-10 · **Supersedes:** *Boojy Suite (Vision Document)* and *Boojy Suite (Early Preview)*
+> **Status as of:** 2026-06-18 · **Supersedes:** *Boojy Suite (Vision Document)* and *Boojy Suite (Early Preview)*
 
 ---
 
@@ -41,13 +41,15 @@ These are unchanged from the original vision and still hold:
 
 ## 3. Product suite — actual lineup & status
 
-| App | What it is | Replaces | Status (2026-06-10) | Tech |
-|---|---|---|---|---|
-| **Boojy Audio** | Cross-platform DAW: multi-track audio/MIDI, mixing, automation, VST3, export | GarageBand, Logic, Audition | **Active dev — v0.5.4 (alpha), v0.6 "Sound" in progress.** Highest priority. | Flutter (UI) + Rust engine via FFI |
-| **Boojy Design** | Web image editor (raster + the former Draw feature set): paint, shapes, text, layers, transform, `.design` save | Photoshop, Affinity, Procreate, Canva | **MVP complete — v0.4.0.** Konva engine landed. | Web (TS), Konva canvas |
-| **Boojy Notes** | Markdown note-taking, block editor, wikilinks, cloud sync | Notion, Obsidian (lightweight) | **In progress — v0.4.0.** Active. | Web + Electron, Supabase + R2 |
-| **Boojy Video** | Video editing with integrated motion graphics | Premiere, Final Cut, Resolve | **Backlog — not started.** | TBD |
-| **Boojy Cloud** | Creative-aware storage, sync, version history | — (infra) | **Backlog — low priority.** Last active Feb 2026. | Supabase |
+
+| App              | What it is                                                                                                      | Replaces                              | Status (2026-06-10)                                                          | Tech                               |
+| ---------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------- |
+| **Boojy Audio**  | Cross-platform DAW: multi-track audio/MIDI, mixing, automation, VST3, export                                    | GarageBand, Logic, Audition           | **Active dev — v0.6.0 (alpha), v0.7 "Devices & Feel" in progress.** Highest priority. | Flutter (UI) + Rust engine via FFI |
+| **Boojy Design** | Web image editor (raster + the former Draw feature set): paint, shapes, text, layers, transform, `.design` save | Photoshop, Affinity, Procreate, Canva | **MVP complete — v0.4.0.** Konva engine landed.                              | Web (TS), Konva canvas             |
+| **Boojy Notes**  | Markdown note-taking, block editor, wikilinks, cloud sync                                                       | Notion, Obsidian (lightweight)        | **In progress — v0.5.0.** Active.                                            | Web + Electron, Supabase + R2      |
+| **Boojy Video**  | Video editing with integrated motion graphics                                                                   | Premiere, Final Cut, Resolve          | **Backlog — not started.**                                                   | TBD                                |
+| **Boojy Cloud**  | Creative-aware storage, sync, version history                                                                   | — (infra)                             | **Backlog — low priority.** Last active Feb 2026.                            | Supabase                           |
+
 
 ### Folded-in / future features (not standalone apps)
 
@@ -55,22 +57,20 @@ These are unchanged from the original vision and still hold:
 - **Animation** → planned **future feature of Boojy Design**, not a separate "Boojy Animate" app.
 - **Music notation / scoring ("Score")** → **possible future feature of Boojy Audio, or a standalone app — post-v1.0 Audio only.** Not in active development.
 
-### Companion / aspirational
-
-- **Buddy Music** — free streaming + buy-to-own marketplace for indie artists (90/10 split), integrating with Boojy Audio. Still aspirational; not started. Kept in the vision as a long-term companion platform.
-
 ---
 
 ## 4. Adobe / competitor coverage (refreshed)
 
-| Incumbent | Boojy replacement | Status |
-|---|---|---|
-| Audition / Logic / GarageBand | Boojy Audio | In active dev (v0.5.4) |
-| Photoshop / Procreate / Canva | Boojy Design | MVP complete (v0.4.0) |
-| Notion / Obsidian | Boojy Notes | In progress (v0.4.0) |
-| Premiere / After Effects | Boojy Video | Backlog |
-| Animate / Toon Boom | *Design (future animation feature)* | Not started |
-| MuseScore / Sibelius | Boojy Audio (Score), possibly standalone | Not started |
+
+| Incumbent                     | Boojy replacement                        | Status                 |
+| ----------------------------- | ---------------------------------------- | ---------------------- |
+| Audition / Logic / GarageBand | Boojy Audio                              | In active dev (v0.6.0) |
+| Photoshop / Procreate / Canva | Boojy Design                             | MVP complete (v0.4.0)  |
+| Notion / Obsidian             | Boojy Notes                              | In progress (v0.5.0)   |
+| Premiere / After Effects      | Boojy Video                              | Backlog                |
+| Animate / Toon Boom           | *Design (future animation feature)*      | Not started            |
+| MuseScore / Sibelius          | Boojy Audio (Score), possibly standalone | Not started            |
+
 
 ---
 
@@ -79,19 +79,21 @@ These are unchanged from the original vision and still hold:
 Rather than fixed month numbers, priorities are now ordered by current state:
 
 **Now**
-- **Boojy Audio** — v0.5 reached; push the v0.6 "Sound" milestone and the road to Beta. Highest-priority app.
+
+- **Boojy Audio** — v0.6.0 shipped; v0.7 "Devices & Feel" underway with Slices 1–4 shipped. Highest-priority app.
 - **Boojy Notes** — continue toward a stable release; polish the core editor and sync.
 - **Boojy Design** — MVP is done; stabilise and begin scoping the **animation feature**.
 
 **Next**
+
 - Promote Audio and Design from alpha/MVP toward v1.0 (feature-complete + stable → open-source).
 - Stand up **Boojy Cloud** properly once at least one app needs production-grade sync beyond Notes' current Supabase + R2 setup.
 
 **Later / post-v1.0**
+
 - **Animation** in Boojy Design.
 - **Boojy Video** moves out of backlog.
 - **Score** decision: feature of Boojy Audio vs. standalone app — evaluated only after Boojy Audio reaches v1.0.
-- **Buddy Music** companion platform, if/when Audio is stable.
 
 ---
 
@@ -123,12 +125,12 @@ If support is ever needed, it stays **optional and ethical** — donations, not 
 - **Boojy Cloud:** **private** for now (tied to specific infra). If opened later, **AGPLv3** is the fit, not GPL — see reasoning below.
 - **Trademarks:** "Boojy" name and logo protected; forks allowed under different names.
 - **Contributions: closed during Early Access** (decided 2026-06-11). Every public repo carries a
-  `CONTRIBUTING.md`: code PRs are closed while the apps are pre-1.0 and **open as each app reaches
-  v1.0**; bug reports (issues) and feedback (boojy.org/#feedback) are welcome throughout.
-  ⚠️ **Before merging the first external PR at v1.0, decide on a DCO or CLA** — merging outside
-  GPLv3 code without one means the codebase is no longer solely owned, which permanently closes the
-  door on relicensing or dual-licensing. Fine if free-forever is absolute, but close that door
-  deliberately, not by accident.
+`CONTRIBUTING.md`: code PRs are closed while the apps are pre-1.0 and **open as each app reaches
+v1.0**; bug reports (issues) and feedback (boojy.org/#feedback) are welcome throughout.
+⚠️ **Before merging the first external PR at v1.0, decide on a DCO or CLA** — merging outside
+GPLv3 code without one means the codebase is no longer solely owned, which permanently closes the
+door on relicensing or dual-licensing. Fine if free-forever is absolute, but close that door
+deliberately, not by accident.
 
 > **Note on Cloud:** the apps' GPLv3 license is independent of the server's. Apps talk to Cloud over a network API, and network use isn't "distribution," so a GPLv3 app does **not** force the server open. You can freely mix GPLv3 apps with a closed or AGPL backend.
 
@@ -136,10 +138,11 @@ If support is ever needed, it stays **optional and ethical** — donations, not 
 
 ## 9. Brand
 
-Authoritative brand facts (colors, logo conventions, name & handles: boojy.org, @boojy on YouTube, @boojyorg elsewhere, GitHub `boojyorg`) live in **[`docs/BRAND.md`](docs/BRAND.md)**; early ideation is archived locally in `archive/brand/`.
+Authoritative brand facts (colors, logo conventions, name & handles: boojy.org, @boojy on YouTube, @boojyorg elsewhere, GitHub `boojyorg`) live in `**[docs/BRAND.md](docs/BRAND.md)`**; early ideation is archived locally in `archive/brand/`.
 
 ---
 
 > **Built by creators, for creators. — Tyr Bujac, Boojy Development**
 >
 > *This is the current source-of-truth vision. The original two suite docs are retained for history with superseded banners.*
+
