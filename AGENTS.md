@@ -18,9 +18,11 @@ A critical rule must never live *only* in agent memory.
 - **`dreams.md`** — the current engineering target + its milestone checklist (`- [ ]`/`- [x]`).
   Volatile *this-week* state only — no backlog, no roadmap, no incident log. Pulled from
   `docs/BACKLOG.md`; safe to wipe each milestone.
-- **`docs/`** — `ROADMAP.md` (ordered intentions), `BACKLOG.md` (unscheduled someday),
+- **`docs/`** (per-app repos) — `ROADMAP.md` (ordered intentions), `BACKLOG.md` (unscheduled someday),
   `FEATURE_TRACKER.md` (what's built vs not, user-facing apps), `FEATURES.md` (prose tour),
   `ARCHITECTURE.md`; plus `archive/`, `private/` (gitignored), `reviews/` (dated reports).
+  The suite-umbrella `docs/` is different — it holds cross-suite references: `BRAND.md`,
+  `DEV_SYSTEM.md`, `REPO_TEMPLATE.md`, and `private/` (gitignored).
 - **agent memory** — incidental cross-session learnings (Claude Code: auto-memory; see the
   Claude Code section).
 - **`git log`** — the history. No session ledger.
