@@ -1,12 +1,22 @@
 # 🎨 Boojy Suite — Vision (2026 Refresh)
 
 > **Tagline:** Creativity without limits.
-> **Mission:** Make professional creative tools free, accessible, and ethical for everyone.
-> **Status as of:** 2026-06-18 · **Supersedes:** *Boojy Suite (Vision Document)* and *Boojy Suite (Early Preview)*
+> **Mission:** Make creative tools that are free, friendly, and a joy to use — built for hobbyists, not professionals.
+> **Status as of:** 2026-08-24 · **Supersedes:** *Boojy Suite (Vision Document)* and *Boojy Suite (Early Preview)*
 
 ---
 
 ## 0. What changed in this refresh
+
+### 2026-08 refresh — direction reset
+
+- **Hobbyist, not professional.** Boojy makes friendly creative tools for hobbyists — approachable like GarageBand or iMovie, not feature-race competitors to Logic or Photoshop. The mission no longer says "professional".
+- **No generative AI in the products** — new core principle (see §2).
+- **Release order is now Notes → Audio → Design → Video.** Notes is the first app pushed to a public release; Audio resumes after.
+- **Boojy Cloud is dropped for now.** Its only app consumer (Notes sync) was removed in the desktop-only push; the service is being wound down. It can return if an app ever needs production-grade sync.
+- **Suite continuity is an explicit goal:** one icon set (Lucide), one design language (`docs/BRAND.md`), shared UI components where the stacks allow (Notes / Design / boojy.org are all React); Audio mirrors the tokens and patterns in Flutter.
+
+### 2026-06 refresh — reconciling with reality
 
 The original vision (Nov 2025 – Feb 2026) described a seven-app lineup that no longer matches what's being built. This refresh reconciles the vision with the actual repos:
 
@@ -28,7 +38,7 @@ Creative software has become expensive, closed, and extractive — Adobe Creativ
 
 ## 2. Core principles
 
-These are unchanged from the original vision and still hold:
+Principles 1–6 are unchanged from the original vision and still hold; 7 was added in the 2026-08 refresh:
 
 1. **Free to create** — every app free forever, including commercial use; no feature gating.
 2. **Open source, GPLv3** — the app repos are public on GitHub (`boojyorg`) and developed in the open; v1.0 marks feature-complete and stable, not the moment the source opens. **Apps: GPLv3** (copyleft, Blender-style). **Boojy Cloud stays private** (AGPLv3 if ever opened). *(Originally "open-source after v1.0"; the repos went public during development in mid-2026.)*
@@ -36,64 +46,67 @@ These are unchanged from the original vision and still hold:
 4. **Human + AI development** — built by Tyr Bujac with AI tooling assisting; all creative and architectural decisions are human-made.
 5. **Accessibility** — lightweight apps, intuitive UI (GarageBand/iMovie-level approachability), free for education, offline-capable.
 6. **Community-driven** — feedback shapes priorities.
+7. **No generative AI** — Boojy apps ship nothing that writes, draws, or composes for you; what you make in a Boojy app is made by you. Assistive, non-generative processing (e.g. noise removal) is judged case-by-case. Distinct from principle 4: AI assists the suite's *development*, never the user's creative work.
 
 ---
 
 ## 3. Product suite — actual lineup & status
 
+Ordered by release order: **Notes → Audio → Design → Video.**
 
-| App              | What it is                                                                                                      | Replaces                              | Status (2026-06-10)                                                          | Tech                               |
-| ---------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------- |
-| **Boojy Audio**  | Cross-platform DAW: multi-track audio/MIDI, mixing, automation, VST3, export                                    | GarageBand, Logic, Audition           | **Active dev — v0.6.0 (alpha), v0.7 "Devices & Feel" in progress.** Highest priority. | Flutter (UI) + Rust engine via FFI |
-| **Boojy Design** | Web image editor (raster + the former Draw feature set): paint, shapes, text, layers, transform, `.design` save | Photoshop, Affinity, Procreate, Canva | **MVP complete — v0.4.0.** Konva engine landed.                              | Web (TS), Konva canvas             |
-| **Boojy Notes**  | Markdown note-taking, block editor, wikilinks, cloud sync                                                       | Notion, Obsidian (lightweight)        | **In progress — v0.5.0.** Active.                                            | Web + Electron, Supabase + R2      |
-| **Boojy Video**  | Video editing with integrated motion graphics                                                                   | Premiere, Final Cut, Resolve          | **Backlog — not started.**                                                   | TBD                                |
-| **Boojy Cloud**  | Creative-aware storage, sync, version history                                                                   | — (infra)                             | **Backlog — low priority.** Last active Feb 2026.                            | Supabase                           |
-
+| App              | What it is                                                                                                      | For people who don't need…            | Status (2026-08-24)                                                          | Tech                               |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------- |
+| **Boojy Notes**  | Markdown note-taking: your files on disk, wikilinks, fast desktop app                                           | Notion, Obsidian                      | **Active — v0.5.0, desktop-first.** First app headed for a public release.   | React + Vite + Electron            |
+| **Boojy Audio**  | Cross-platform DAW: multi-track audio/MIDI, mixing, automation, VST3, export                                    | GarageBand, Logic, Audition           | **Paused at v0.6.0 (since June 2026)** — v0.7 "Devices & Feel" resumes after Notes releases. | Flutter (UI) + Rust engine via FFI |
+| **Boojy Design** | Web image editor (raster + the former Draw feature set): paint, shapes, text, layers, transform, `.design` save | Photoshop, Procreate, Canva           | **MVP complete — v0.4.0, stable.** Konva engine landed.                      | Web (TS), Konva canvas             |
+| **Boojy Video**  | Video editing with integrated motion graphics                                                                   | iMovie, Premiere, Resolve             | **Backlog — not started.** Last in the release order.                        | TBD                                |
 
 ### Folded-in / future features (not standalone apps)
 
 - **Drawing/illustration** → lives inside **Boojy Design** (the former "Boojy Draw").
 - **Animation** → planned **future feature of Boojy Design**, not a separate "Boojy Animate" app.
 - **Music notation / scoring ("Score")** → **possible future feature of Boojy Audio, or a standalone app — post-v1.0 Audio only.** Not in active development.
+- **Cloud sync ("Boojy Cloud")** → **dropped for now (2026-08-24).** The Supabase + R2 service is being wound down (the private repo stays). Returns only if/when an app needs production-grade sync — and free-only if it does.
 
 ---
 
-## 4. Adobe / competitor coverage (refreshed)
+## 4. Coverage — the tools you might not need
 
+Boojy apps aren't drop-in replacements for professional suites — they're for people whose needs those suites exceed. If you make things for the joy of it, you may not need:
 
-| Incumbent                     | Boojy replacement                        | Status                 |
-| ----------------------------- | ---------------------------------------- | ---------------------- |
-| Audition / Logic / GarageBand | Boojy Audio                              | In active dev (v0.6.0) |
-| Photoshop / Procreate / Canva | Boojy Design                             | MVP complete (v0.4.0)  |
-| Notion / Obsidian             | Boojy Notes                              | In progress (v0.5.0)   |
-| Premiere / After Effects      | Boojy Video                              | Backlog                |
-| Animate / Toon Boom           | *Design (future animation feature)*      | Not started            |
-| MuseScore / Sibelius          | Boojy Audio (Score), possibly standalone | Not started            |
+| If you were reaching for…     | Try                                      | Status                          |
+| ----------------------------- | ---------------------------------------- | ------------------------------- |
+| Notion / Obsidian             | Boojy Notes                              | Active (v0.5.0) — releasing first |
+| GarageBand / Logic / Audition | Boojy Audio                              | Paused at v0.6.0 — next after Notes |
+| Photoshop / Procreate / Canva | Boojy Design                             | MVP complete (v0.4.0)           |
+| iMovie / Premiere             | Boojy Video                              | Backlog                         |
+| Animate / Toon Boom           | *Design (future animation feature)*      | Not started                     |
+| MuseScore / Sibelius          | Boojy Audio (Score), possibly standalone | Not started                     |
 
 
 ---
 
 ## 5. Roadmap (reframed to reality)
 
-Rather than fixed month numbers, priorities are now ordered by current state:
+Rather than fixed month numbers, priorities follow the release order: **Notes → Audio → Design → Video.**
 
 **Now**
 
-- **Boojy Audio** — v0.6.0 shipped; v0.7 "Devices & Feel" underway with Slices 1–4 shipped. Highest-priority app.
-- **Boojy Notes** — continue toward a stable release; polish the core editor and sync.
-- **Boojy Design** — MVP is done; stabilise and begin scoping the **animation feature**.
+- **Boojy Notes** — the release push: desktop-first polish and stability toward the suite's first public release.
+- **Suite continuity groundwork** — design language + tokens in `docs/BRAND.md`, Lucide everywhere, shared UI components across the React apps (Notes / Design / boojy.org).
+- **Cloud wind-down** — boojy.org stops depending on Supabase, then the keep-alive ping is disabled and the project paused.
 
 **Next**
 
-- Promote Audio and Design from alpha/MVP toward v1.0 (feature-complete + stable → open-source).
-- Stand up **Boojy Cloud** properly once at least one app needs production-grade sync beyond Notes' current Supabase + R2 setup.
+- **Boojy Audio** — resume after the Notes release; v0.7 "Devices & Feel" is mid-flight.
+- **Boojy Design** — stabilise; scope the **animation feature** when it gets focus again.
 
 **Later / post-v1.0**
 
+- **Boojy Video** moves out of backlog (last in the release order).
 - **Animation** in Boojy Design.
-- **Boojy Video** moves out of backlog.
 - **Score** decision: feature of Boojy Audio vs. standalone app — evaluated only after Boojy Audio reaches v1.0.
+- **Boojy Cloud** returns only if an app needs production-grade sync.
 
 ---
 
@@ -103,7 +116,7 @@ Rather than fixed month numbers, priorities are now ordered by current state:
 
 - **Boojy Audio** — macOS lead (Flutter cross-platform, so Windows follows); mobile/iPad later.
 - **Boojy Design** — web-first (browser), which is inherently cross-platform; tested on macOS.
-- **Boojy Notes** — web + desktop (Electron), developed on macOS; mobile considerations in the codebase.
+- **Boojy Notes** — desktop-first (Electron), developed on macOS; the web build is parked, mobile considerations remain in the codebase.
 
 Windows, Linux, and tablet/mobile builds remain a "between v0.5 and v1.0" goal per app, but always after the macOS build is working.
 
@@ -115,7 +128,7 @@ Windows, Linux, and tablet/mobile builds remain a "between v0.5 and v1.0" goal p
 
 If support is ever needed, it stays **optional and ethical** — donations, not subscriptions. (A paid **"Boojy Orbit"** cloud tier was previously planned and has been **dropped** as of 2026-06-09: Boojy is about free and open-source software, not subscriptions.)
 
-**Boojy Cloud is free-only.** Optional sync, free up to ~500 MB, no paid tier. It powers Boojy Notes today and rolls out to other apps over time. Storage is absorbed as a personal-project cost; the levers if that ever stops scaling are a soft cap or donations — **not** a subscription.
+**Boojy Cloud is dropped for now** (2026-08-24) — Notes went local-files-only and nothing else consumes it. If it ever returns, it returns **free-only**: optional sync, no paid tier; storage absorbed as a personal-project cost, with a soft cap or donations as the levers — **not** a subscription.
 
 ---
 
