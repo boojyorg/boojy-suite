@@ -5,6 +5,9 @@ Decision and structure changes to the suite-level docs. Each app keeps its own `
 ## 2026-09-07
 
 ### Improvements
+- **Contribution policy simplified** (`CONTRIBUTING.md`, `README.md`, `VISION.md` §8). Boojy is a
+  personal project and isn't accepting external code contributions; no "opens at v1.0" promise.
+  Feedback and bug reports go by email to tyr@boojy.org. The same text is in every public repo.
 - **Cloud position revised** (`VISION.md` §0, §1, §3, §5, §7; `README.md`; `SUITE_STATUS.md`).
   The apps and every editing feature stay free forever, including commercial use, and local use
   never needs an account. Boojy Cloud becomes a *possible future service* with a small free storage

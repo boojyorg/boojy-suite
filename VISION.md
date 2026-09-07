@@ -145,13 +145,12 @@ Windows, Linux, and tablet/mobile builds remain a "between v0.5 and v1.0" goal p
 - **Apps: GPLv3** (decided). Copyleft, Blender-style — forks must stay open. The apps (Audio, Notes, Design, Web) carry a `LICENSE` of GPLv3; already-published commits stay under whatever they shipped (relicensing is forward-only). MIT was considered and rejected — copyleft keeps the suite and its forks open.
 - **Boojy Cloud:** **private** for now (tied to specific infra). If opened later, **AGPLv3** is the fit, not GPL — see reasoning below.
 - **Trademarks:** "Boojy" name and logo protected; forks allowed under different names.
-- **Contributions: closed during Early Access** (decided 2026-06-11). Every public repo carries a
-`CONTRIBUTING.md`: code PRs are closed while the apps are pre-1.0 and **open as each app reaches
-v1.0**; bug reports (issues) and feedback (boojy.org/#feedback) are welcome throughout.
-⚠️ **Before merging the first external PR at v1.0, decide on a DCO or CLA** — merging outside
-GPLv3 code without one means the codebase is no longer solely owned, which permanently closes the
-door on relicensing or dual-licensing. Fine if free-forever is absolute, but close that door
-deliberately, not by accident.
+- **Contributions: closed** (updated 2026-09-07; originally "closed during Early Access",
+2026-06-11). Boojy is a personal project and doesn't accept external code contributions or pull
+requests. That may change later; there's no date. Every public repo carries the same
+`CONTRIBUTING.md`. Feedback and bug reports are welcome by email (tyr@boojy.org). If
+contributions ever open, review contribution licensing first (for example whether a DCO or a
+CLA is appropriate for GPLv3 code) before accepting the first external change.
 
 > **Note on Cloud:** the apps' GPLv3 license is independent of the server's. Apps talk to Cloud over a network API, and network use isn't "distribution," so a GPLv3 app does **not** force the server open. You can freely mix GPLv3 apps with a closed or AGPL backend.
 
