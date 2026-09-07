@@ -15,25 +15,18 @@ A critical rule must never live *only* in agent memory.
 
 - **`AGENTS.md`** (this file + each repo's) — always-true rules. Read every session.
 - **`.claude/rules/*.md`** — per-area gotchas + durable facts, one topic per file.
-- **`dreams.md`** — the current engineering target + its milestone checklist (`- [ ]`/`- [x]`).
-  Volatile *this-week* state only — no backlog, no roadmap, no incident log. Pulled from
-  `docs/BACKLOG.md`; safe to wipe each milestone.
-- **`docs/`** (per-app repos) — `ROADMAP.md` (ordered intentions), `BACKLOG.md` (unscheduled someday),
-  `FEATURE_TRACKER.md` (what's built vs not, user-facing apps), `FEATURES.md` (prose tour),
-  `ARCHITECTURE.md`; plus `archive/`, `private/` (gitignored), `reviews/` (dated reports).
+- **`docs/BACKLOG.md`** (per-app repos) — the **one planning file**: direction, what's next, known
+  issues, someday items, and the decisions behind them. Shipped work leaves it for `CHANGELOG.md`.
+  No `dreams.md`, no roadmap file, no feature tracker. Optional alongside it: `ARCHITECTURE.md`,
+  `SPEC-*.md` (binding constraints), `archive/`, `private/` (gitignored), `reviews/` (dated
+  reports), and a root `FEATURES.md` tour for a user-facing app. *(boojy-audio still carries the
+  older `dreams.md` / `ROADMAP` / `FEATURE_TRACKER` shape; it is reorganised when development
+  resumes, not before.)*
   The suite-umbrella `docs/` is different — it holds cross-suite references: `BRAND.md`,
-  `DEV_SYSTEM.md`, `REPO_TEMPLATE.md`, and `private/` (gitignored).
+  `REPO_TEMPLATE.md`, and `private/` (gitignored).
 - **agent memory** — incidental cross-session learnings (Claude Code: auto-memory; see the
   Claude Code section).
 - **`git log`** — the history. No session ledger.
-
-## Weekly planning ritual
-
-Suite-wide weekly targets live in the suite root's `SUITE_STATUS.md` ("This Week" — one-line,
-app-prefixed, disposable; regenerated snapshot via `scripts/suite-status.sh`). The ritual: Sunday,
-review the past week together (the agent brings the git facts, Tyr the judgment), then co-draft
-next week's list. Don't run it unprompted — the ritual needs Tyr's input. ⚠️ The file is public —
-nothing sensitive goes in it.
 
 ## Changelog workflow
 
@@ -46,16 +39,14 @@ Update `CHANGELOG.md` as you go — entries under a top `## Unreleased` section,
 1. Bump the version (repo's canonical source — `package.json` / `ui/pubspec.yaml` / etc.).
 2. `CHANGELOG.md`: `Unreleased` → `vX.Y.Z` + date.
 3. Green the repo's gates.
-4. For user-facing apps, tick the shipped items in `docs/FEATURE_TRACKER.md` **in the same commit**.
+4. Shipped items leave `docs/BACKLOG.md` **in the same commit** (the changelog now records them).
+   Audio: also tick `docs/FEATURE_TRACKER.md` while it still has that file.
 5. Commit, then tag `vX.Y.Z` and push.
 
 ## Branch discipline
 
 Never commit straight to `main`/`master`. Branch → green the repo's gates locally → PR. **CI is the
 gate**, not just local tests. Don't bypass pre-commit hooks (`--no-verify`).
-
-**One exception:** the suite-umbrella repo's `SUITE_STATUS.md` (a generated/weekly status doc with
-no gates behind it) may be committed directly to `main` — typically by the weekly ritual.
 
 **Stacked PRs:** GitHub's "MERGED" badge means *merged into its base*, which for a stacked PR is the
 previous PR's branch — **not** master. When PR1 of a stack merges, **delete its branch** so GitHub
@@ -66,14 +57,15 @@ retargets the rest of the stack to master; before treating any stacked PR as lan
 ## Context-hygiene gate
 
 When session context crosses ~50%, pause active loops, summarise the current task + files touched,
-update `dreams.md`, and compact the conversation. Clear context when switching tasks. Be deliberate
+note anything that must survive in `docs/BACKLOG.md`, and compact the conversation. Clear context when switching tasks. Be deliberate
 about spawning subagents (each is its own request stream) — long context + subagent fan-out is what
 drives cost.
 
 ## Keep docs current
 
 A structure/roadmap change updates `AGENTS.md` (+ the relevant `.claude/rules/` file + `README.md`)
-in the **same commit**. A release bumps the version + `CHANGELOG.md` (+ `FEATURE_TRACKER.md`).
+in the **same commit**. A release bumps the version + `CHANGELOG.md`, and updates the app's row
+in the suite root `README.md` (the one cross-suite status; there is no separate status doc).
 
 ## Working preferences
 
@@ -91,7 +83,4 @@ Only applies when the agent is Claude Code; other agents can skip this section.
 - **Loading:** Claude Code walks up the directory tree and loads this file automatically alongside
   the repo's own. In every repo, `CLAUDE.md` is a symlink to `AGENTS.md`.
 - **Agent memory** = Claude Code auto-memory; skim `/memory` after a big refactor.
-- **Weekly ritual** = the suite-root `/weekly` skill. If a session starts on Sunday or Monday and
-  the `SUITE_STATUS.md` "This Week" heading is from a past week, suggest running `/weekly` — don't
-  auto-run it.
 - **Context hygiene** = `/compact` at the ~50% gate, `/clear` when switching tasks.

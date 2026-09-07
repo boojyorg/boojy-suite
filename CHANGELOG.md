@@ -5,6 +5,12 @@ Decision and structure changes to the suite-level docs. Each app keeps its own `
 ## 2026-09-07
 
 ### Improvements
+- **Planning files pruned to one shape.** `SUITE_STATUS.md`, its generator script and the `weekly`
+  and `suite-status` skills are gone (the Sunday ritual last ran in June); the README apps table is
+  the one cross-suite status. `docs/DEV_SYSTEM.md` folded into `docs/REPO_TEMPLATE.md`, which now
+  describes the Notes shape: one `docs/BACKLOG.md` per repo, no `dreams.md`, no roadmap or feature
+  tracker. `AGENTS.md` docs model, release steps and Claude Code notes updated to match. Audio keeps
+  its older shape until development resumes.
 - **Contribution policy simplified** (`CONTRIBUTING.md`, `README.md`, `VISION.md` §8). Boojy is a
   personal project and isn't accepting external code contributions; no "opens at v1.0" promise.
   Feedback and bug reports go by email to tyr@boojy.org. The same text is in every public repo.
