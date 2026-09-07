@@ -1,6 +1,6 @@
 ---
 name: suite-sync
-description: Quick mechanical check that suite-root docs (README.md, VISION.md) match each app repo's canonical version. Run after any release, or anytime you suspect version drift. Takes ~30 seconds. Not a full audit — for a deep docs review use the boojy-docs-audit workflow.
+description: Quick mechanical check that suite-root docs (README.md, VISION.md) match each app repo's canonical version. Run after any release, or anytime you suspect version drift. Takes ~30 seconds. Not a full audit.
 disable-model-invocation: false
 ---
 
@@ -21,9 +21,6 @@ Read these files in parallel:
 - `~/Documents/Projects/boojy/README.md` — apps table (one row per app)
 - `~/Documents/Projects/boojy/VISION.md` — product table + competitor table + "Now" roadmap bullet + "Status as of" date
 
-**Status snapshot:**
-- `~/Documents/Projects/boojy/SUITE_STATUS.md` — check the snapshot date in the AUTO block header
-
 ## Checks
 
 For each app (Audio, Notes, Design):
@@ -33,7 +30,6 @@ For each app (Audio, Notes, Design):
 
 Also check:
 - VISION.md "Status as of" date — is it more than a week old?
-- SUITE_STATUS.md snapshot date — is it more than 3 days old? If so, suggest running `bash ~/Documents/Projects/boojy/scripts/suite-status.sh`
 
 ## Output format
 
@@ -47,10 +43,10 @@ Then a compact table:
 | VISION.md | Notes | v0.4.0 | v0.5.0 | ✗ stale |
 | README.md | Design | v0.4.0 | v0.4.0 | ✓ |
 
-Then list any other staleness (VISION.md date, SUITE_STATUS.md freshness).
+Then list any other staleness (VISION.md date).
 
 ## If fixes are needed
 
-Ask: "Fix these now?" If yes, apply the targeted edits — version strings only, no surrounding content changes. Then run `bash ~/Documents/Projects/boojy/scripts/suite-status.sh` if the snapshot is stale.
+Ask: "Fix these now?" If yes, apply the targeted edits — version strings only, no surrounding content changes.
 
-Do NOT touch FEATURE_TRACKER, ROADMAP, dreams.md, or any per-app doc — this skill is suite-root version tables only. For broader doc drift, run the `boojy-docs-audit` workflow.
+Do NOT touch any per-app doc — this skill is suite-root version tables only. Broader doc drift needs a proper review, not this skill.
