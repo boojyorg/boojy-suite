@@ -48,6 +48,6 @@ Starting a new app (e.g. Boojy Video)? Scaffold its repo from
 
 ## Contributing
 
-The suite is in **Early Access** and isn't accepting pull requests yet — contributions will open
-as each app reaches its v1.0 release. **Bug reports and feedback are very welcome** — see
-[`CONTRIBUTING.md`](CONTRIBUTING.md).
+Boojy is a personal project and isn't accepting code contributions or pull requests right now.
+Feedback and bug reports are welcome by email at [tyr@boojy.org](mailto:tyr@boojy.org).
+See [CONTRIBUTING.md](CONTRIBUTING.md).
