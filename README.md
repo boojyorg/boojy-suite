@@ -2,7 +2,7 @@
 
 **Creativity without limits.** Boojy is a suite of free, open-source creative apps — a note-taking
 app, a DAW, an image editor, with more planned — built for hobbyists: people who make things for the
-joy of it and don't need professional suites. Free forever (no subscriptions, paywalls, or trials),
+joy of it and don't need professional suites. Every app is free forever (no subscriptions, paywalls, or trials),
 GPLv3 and developed in public, privacy-first (no telemetry or ads), no generative AI, cross-platform.
 
 **New here?** This page tells you what exists and where to go. **[`VISION.md`](VISION.md)** explains
@@ -19,7 +19,7 @@ Ordered by release order (Notes → Audio → Design → Video):
 | **[boojy-audio](https://github.com/boojyorg/boojy-audio)** | Cross-platform DAW — multi-track audio/MIDI, mixing, VST3 (Flutter UI + Rust engine) | GarageBand, Logic, Audition | **Alpha — v0.6.0**, paused; resumes after Notes releases. |
 | **[boojy-design](https://github.com/boojyorg/boojy-design)** | Web image editor — paint, shapes, text, layers | Photoshop, Procreate, Canva | **MVP — v0.4.0** |
 | **[boojy-web](https://github.com/boojyorg/boojy-web)** | Source for [boojy.org](https://boojy.org) (Astro static) | — | **Live** |
-| **boojy-cloud** | Supabase backend (formerly Notes sync) | — | **Dropped for now** (private repo; may return) |
+| **boojy-cloud** | Supabase backend (formerly Notes sync) | — | **Future possibility** — not a current product (private repo, dormant) |
 
 *Status updated on releases; for live week-to-week state see [`SUITE_STATUS.md`](SUITE_STATUS.md)
 (auto-refreshed snapshot + the current weekly targets). Each repo's `CHANGELOG.md` is authoritative

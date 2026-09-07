@@ -2,11 +2,18 @@
 
 > **Tagline:** Creativity without limits.
 > **Mission:** Make creative tools that are free, friendly, and a joy to use — built for hobbyists, not professionals.
-> **Status as of:** 2026-08-24 · **Supersedes:** *Boojy Suite (Vision Document)* and *Boojy Suite (Early Preview)*
+> **Status as of:** 2026-09-07 · **Supersedes:** *Boojy Suite (Vision Document)* and *Boojy Suite (Early Preview)*
 
 ---
 
 ## 0. What changed in this refresh
+
+### 2026-09 refresh — Cloud position revised
+
+- **The apps stay free forever, including commercial use, and local use never needs an account.** This is the promise everything else sits under; it is restated, not changed.
+- **Boojy Cloud is a possible future service, not a dropped one.** If built, it would offer a small free storage allowance, and extra hosted storage could be paid for — payment covers hosting, never unlocks features. This deliberately replaces the 2026-06-09 "no paid tier" and 2026-08-24 "free-only if it returns" decisions (see §7).
+- **Connecting your own cloud storage** (a Drive or iCloud folder, for example) is a separate future option.
+- Cloud support would arrive **app by app**; nothing implies it exists today or promises a date. **Notes Beta is unaffected:** desktop, local files, no account, no sync.
 
 ### 2026-08 refresh — direction reset
 
@@ -32,7 +39,7 @@ The original vision (Nov 2025 – Feb 2026) described a seven-app lineup that no
 
 Creative software has become expensive, closed, and extractive — Adobe Creative Cloud at ~£66/month, paywalled "pro" tiers, proprietary file formats, and telemetry that monetises your work. For students, hobbyists, and independent creators that's prohibitive.
 
-**Boojy Suite** is a creative ecosystem that is free forever (no subscriptions, paywalls, or trials), open-source (GPLv3, developed in public repos), privacy-first (no telemetry or ads by default), cross-platform, and ethical — revenue is reinvested into development rather than extracted from users.
+**Boojy Suite** is a creative ecosystem whose apps are free forever (no subscriptions, paywalls, or trials for any app or editing feature), open-source (GPLv3, developed in public repos), privacy-first (no telemetry or ads by default), cross-platform, and ethical — revenue is reinvested into development rather than extracted from users.
 
 ---
 
@@ -66,7 +73,7 @@ Ordered by release order: **Notes → Audio → Design → Video.**
 - **Drawing/illustration** → lives inside **Boojy Design** (the former "Boojy Draw").
 - **Animation** → planned **future feature of Boojy Design**, not a separate "Boojy Animate" app.
 - **Music notation / scoring ("Score")** → **possible future feature of Boojy Audio, or a standalone app — post-v1.0 Audio only.** Not in active development.
-- **Cloud sync ("Boojy Cloud")** → **dropped for now (2026-08-24).** The Supabase + R2 service is being wound down (the private repo stays). Returns only if/when an app needs production-grade sync — and free-only if it does.
+- **Cloud sync ("Boojy Cloud")** → **a future possibility, not a current product.** The 2026 Supabase + R2 service was wound down (the private repo stays). If built, it arrives app by app, with no date promised — see §7.
 
 ---
 
@@ -94,7 +101,6 @@ Rather than fixed month numbers, priorities follow the release order: **Notes �
 
 - **Boojy Notes** — the release push: desktop-first polish and stability toward the suite's first public release.
 - **Suite continuity groundwork** — design language + tokens in `docs/BRAND.md`, Lucide everywhere, shared UI components across the React apps (Notes / Design / boojy.org).
-- **Cloud wind-down** — boojy.org stops depending on Supabase, then the keep-alive ping is disabled and the project paused.
 
 **Next**
 
@@ -106,7 +112,7 @@ Rather than fixed month numbers, priorities follow the release order: **Notes �
 - **Boojy Video** moves out of backlog (last in the release order).
 - **Animation** in Boojy Design.
 - **Score** decision: feature of Boojy Audio vs. standalone app — evaluated only after Boojy Audio reaches v1.0.
-- **Boojy Cloud** returns only if an app needs production-grade sync.
+- **Boojy Cloud** — a possible future service, added app by app if it is built; no date (§7).
 
 ---
 
@@ -126,9 +132,11 @@ Windows, Linux, and tablet/mobile builds remain a "between v0.5 and v1.0" goal p
 
 **Low priority — Boojy is primarily a personal-use project.** There's no revenue ambition driving the roadmap; the apps are built for personal use and shared freely. A business model exists only to cover costs if/when others use the apps, not as a goal in itself.
 
-If support is ever needed, it stays **optional and ethical** — donations, not subscriptions. (A paid **"Boojy Orbit"** cloud tier was previously planned and has been **dropped** as of 2026-06-09: Boojy is about free and open-source software, not subscriptions.)
+**The apps are free forever.** Every Boojy app and every editing feature is free, including commercial use — no subscriptions, paywalls, trials, or feature gating. Local use never requires an account. Every app keeps your work as ordinary files in a folder you choose, so nothing depends on a Boojy service. If support for the project itself is ever needed, it stays **optional and ethical** — donations.
 
-**Boojy Cloud is dropped for now** (2026-08-24) — Notes went local-files-only and nothing else consumes it. If it ever returns, it returns **free-only**: optional sync, no paid tier; storage absorbed as a personal-project cost, with a soft cap or donations as the levers — **not** a subscription.
+**Hosted storage is the one thing that could ever cost money.** **Boojy Cloud** is a possible future service, not a current product. If it is built, it would offer a small free storage allowance, and extra hosted storage could be paid for — payment covers hosting, never unlocks features. Connecting **your own cloud storage** (a Drive or iCloud folder, for example) is a separate future option. Cloud support would arrive app by app; nothing here implies it exists today or promises a date. No price or quota is set or published.
+
+*(Decided 2026-09-07. Replaces the 2026-06-09 "no paid tier" and 2026-08-24 "free-only if it returns" decisions; the earlier Supabase + R2 service was wound down in August 2026 and the private repo is dormant.)*
 
 ---
 
