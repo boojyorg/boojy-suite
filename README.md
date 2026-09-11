@@ -15,7 +15,7 @@ Ordered by release order (Notes → Audio → Design → Video):
 
 | Repo | What it is | For people who don't need… | Status |
 |------|------------|----------------------------|--------|
-| **[boojy-notes](https://github.com/boojyorg/boojy-notes)** | Markdown note-taking — your files on disk, wikilinks (React + Electron) | Notion, Obsidian | **Alpha — v0.5.0.** Current focus: the desktop Beta. |
+| **[boojy-notes](https://github.com/boojyorg/boojy-notes)** | Markdown note-taking — your files on disk, wikilinks (React + Electron) | Notion, Obsidian | **Alpha — v0.7.0** (early access, 2026-09-11). Current focus: the desktop Beta. |
 | **[boojy-audio](https://github.com/boojyorg/boojy-audio)** | Cross-platform DAW — multi-track audio/MIDI, mixing, VST3 (Flutter UI + Rust engine) | GarageBand, Logic, Audition | **Alpha — v0.6.0.** Development currently paused. |
 | **[boojy-design](https://github.com/boojyorg/boojy-design)** | Web image editor — paint, shapes, text, layers | Photoshop, Procreate, Canva | **Preview — v0.4.0.** Works; development currently paused. |
 | **[boojy-web](https://github.com/boojyorg/boojy-web)** | Source for [boojy.org](https://boojy.org) (Astro static) | — | **Live** |
