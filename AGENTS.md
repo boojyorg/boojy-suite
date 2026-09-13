@@ -19,9 +19,7 @@ A critical rule must never live *only* in agent memory.
   issues, someday items, and the decisions behind them. Shipped work leaves it for `CHANGELOG.md`.
   No `dreams.md`, no roadmap file, no feature tracker. Optional alongside it: `ARCHITECTURE.md`,
   `SPEC-*.md` (binding constraints), `archive/`, `private/` (gitignored), `reviews/` (dated
-  reports), and a root `FEATURES.md` tour for a user-facing app. *(boojy-audio still carries the
-  older `dreams.md` / `ROADMAP` / `FEATURE_TRACKER` shape; it is reorganised when development
-  resumes, not before.)*
+  reports), and a root `FEATURES.md` tour for a user-facing app.
   The suite-umbrella `docs/` is different — it holds cross-suite references: `BRAND.md`,
   `REPO_TEMPLATE.md`, and `private/` (gitignored).
 - **agent memory** — incidental cross-session learnings (Claude Code: auto-memory; see the
@@ -40,7 +38,6 @@ Update `CHANGELOG.md` as you go — entries under a top `## Unreleased` section,
 2. `CHANGELOG.md`: `Unreleased` → `vX.Y.Z` + date.
 3. Green the repo's gates.
 4. Shipped items leave `docs/BACKLOG.md` **in the same commit** (the changelog now records them).
-   Audio: also tick `docs/FEATURE_TRACKER.md` while it still has that file.
 5. Commit, then tag `vX.Y.Z` and push.
 
 ## Branch discipline
