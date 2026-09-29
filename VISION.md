@@ -27,7 +27,7 @@
 
 The original vision (Nov 2025 – Feb 2026) described a seven-app lineup that no longer matches what's being built. This refresh reconciles the vision with the actual repos:
 
-- **Boojy Notes is now a core app.** It didn't exist in the original vision; it's currently the third active product (v0.11.0).
+- **Boojy Notes is now a core app.** It didn't exist in the original vision; it's the first app in early access (v0.11.0).
 - **Boojy Draw is gone as a standalone app.** Its painting/illustration features were folded into **Boojy Design**.
 - **Boojy Animate is no longer a standalone app.** Animation becomes a **future feature of Boojy Design**.
 - **Boojy Score is not in the works.** It's a *possible* future feature of **Boojy Audio**, or a standalone app — but only **post-v1.0 Boojy Audio**, not now.
@@ -63,9 +63,9 @@ Ordered by release order: **Notes → Audio → Design → Video.**
 
 | App              | What it is                                                                                                      | For people who don't need…            | Status (2026-08-24)                                                          | Tech                               |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------- |
-| **Boojy Notes**  | Markdown note-taking: your files on disk, wikilinks, fast desktop app                                           | Notion, Obsidian                      | **Active — v0.11.0, desktop-first.** First app headed for a public release.   | React + Vite + Electron            |
-| **Boojy Audio**  | Cross-platform DAW: multi-track audio/MIDI, mixing, automation, VST3, export                                    | GarageBand, Logic, Audition           | **Paused at v0.6.0 (since June 2026)** — v0.7 "Devices & Feel" resumes after Notes releases. | Flutter (UI) + Rust engine via FFI |
-| **Boojy Design** | Web image editor (raster + the former Draw feature set): paint, shapes, text, layers, transform, `.design` save | Photoshop, Procreate, Canva           | **MVP complete — v0.4.0, stable.** Konva engine landed.                      | Web (TS), Konva canvas             |
+| **Boojy Notes**  | Markdown note-taking: your files on disk, wikilinks, fast desktop app                                           | Notion, Obsidian                      | **Early access — v0.11.0, desktop-first.** Next stage: the desktop Beta.   | React + Vite + Electron            |
+| **Boojy Audio**  | Cross-platform DAW: multi-track audio/MIDI, mixing, automation, VST3, export                                    | GarageBand, Logic, Audition           | **Early access — v0.6.0, in active development.** Slowed from mid-September; resumed 2026-09-29 to finish v0.7.0, reliability first. | Flutter (UI) + Rust engine via FFI |
+| **Boojy Design** | Web image editor (raster + the former Draw feature set): paint, shapes, text, layers, transform, `.design` save | Photoshop, Procreate, Canva           | **Paused — v0.4.0 working preview.** Konva engine landed. Unlisted on boojy.org since 2026-09-11. | Web (TS), Konva canvas             |
 | **Boojy Video**  | Video editing with integrated motion graphics                                                                   | iMovie, Premiere, Resolve             | **Backlog — not started.** Last in the release order.                        | TBD                                |
 
 ### Folded-in / future features (not standalone apps)
@@ -83,9 +83,9 @@ Boojy apps aren't drop-in replacements for professional suites — they're for p
 
 | If you were reaching for…     | Try                                      | Status                          |
 | ----------------------------- | ---------------------------------------- | ------------------------------- |
-| Notion / Obsidian             | Boojy Notes                              | Active (v0.11.0) — releasing first |
-| GarageBand / Logic / Audition | Boojy Audio                              | Paused at v0.6.0 — next after Notes |
-| Photoshop / Procreate / Canva | Boojy Design                             | MVP complete (v0.4.0)           |
+| Notion / Obsidian             | Boojy Notes                              | Early access (v0.11.0)           |
+| GarageBand / Logic / Audition | Boojy Audio                              | Early access (v0.6.0), in development |
+| Photoshop / Procreate / Canva | Boojy Design                             | Paused (v0.4.0)                 |
 | iMovie / Premiere             | Boojy Video                              | Backlog                         |
 | Animate / Toon Boom           | *Design (future animation feature)*      | Not started                     |
 | MuseScore / Sibelius          | Boojy Audio (Score), possibly standalone | Not started                     |
@@ -99,12 +99,12 @@ Rather than fixed month numbers, priorities follow the release order: **Notes �
 
 **Now**
 
-- **Boojy Notes** — the release push: desktop-first polish and stability toward the suite's first public release.
+- **Boojy Notes** — early access since v0.7.0; daily-use reliability and polish toward the desktop Beta.
+- **Boojy Audio** — back in development (2026-09-29): finish v0.7.0, engine reliability first (the 2026-09-13 review in its `docs/reviews/`).
 - **Suite continuity groundwork** — design language + tokens in `docs/BRAND.md`, Lucide everywhere, shared UI components across the React apps (Notes / Design / boojy.org).
 
 **Next**
 
-- **Boojy Audio** — resume after the Notes release; v0.7 "Devices & Feel" is mid-flight.
 - **Boojy Design** — stabilise; scope the **animation feature** when it gets focus again.
 
 **Later / post-v1.0**

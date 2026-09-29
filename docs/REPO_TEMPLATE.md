@@ -10,7 +10,7 @@ Notes settled on: one planning file, no `dreams.md`, no roadmap or feature track
 <repo>/
 ├── README.md                 # what it is, how to run it, a Status paragraph, a Contributing section
 ├── AGENTS.md                 # app-specific always-true rules; inherits the suite-root AGENTS.md
-├── CLAUDE.md                 # symlink → AGENTS.md (Claude Code reads this name)
+├── CLAUDE.md                 # one line: "Read AGENTS.md before taking any action in this repo."
 ├── CHANGELOG.md              # `## Unreleased` + released versions (format in the suite-root AGENTS.md)
 ├── CONTRIBUTING.md           # the shared contribution policy, same text in every public repo
 ├── LICENSE                   # GPLv3 for apps (see Vision §8); boojy-cloud stays private
@@ -63,7 +63,7 @@ keep genuinely global rules in `AGENTS.md`.
 
 Apply on a branch; green gates before commit; never commit to the default branch.
 
-1. Copy the skeleton. Symlink `CLAUDE.md` → `AGENTS.md`.
+1. Copy the skeleton. `CLAUDE.md` is the one-line pointer to `AGENTS.md`, not a symlink.
 2. `AGENTS.md`: local always-true rules only (stack, commands, invariants, where things live).
    Per-area gotchas go to `.claude/rules/`, one topic per file.
 3. `docs/BACKLOG.md`: start it with a Direction section and a Next section, even if short.

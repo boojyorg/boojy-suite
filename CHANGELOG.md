@@ -2,6 +2,16 @@
 
 Decision and structure changes to the suite-level docs. Each app keeps its own `CHANGELOG.md`.
 
+## 2026-09-29
+
+### Improvements
+- **Status matches reality across the suite docs** (`README.md`, `VISION.md` §1, §3, §4, §5).
+  Notes and Audio are both labelled early access, the stage before Beta. Audio is in active
+  development again (it had slowed, not stopped), working toward v0.7.0 with reliability first.
+  Design reads as paused at v0.4.0 and unlisted, instead of "MVP complete, stable".
+- **`CLAUDE.md` is a one-line pointer, not a symlink** (`AGENTS.md`, `docs/REPO_TEMPLATE.md`).
+- **Notes accent is `#8FC1C6`** (misty teal, from 2026-09-14) in `docs/BRAND.md`.
+
 ## 2026-09-07
 
 ### Improvements
