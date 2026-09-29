@@ -78,6 +78,6 @@ in the suite root `README.md` (the one cross-suite status; there is no separate 
 Only applies when the agent is Claude Code; other agents can skip this section.
 
 - **Loading:** Claude Code walks up the directory tree and loads this file automatically alongside
-  the repo's own. In every repo, `CLAUDE.md` is a symlink to `AGENTS.md`.
+  the repo's own. In every repo, `CLAUDE.md` is a one-line file ("Read AGENTS.md before taking any action in this repo.") rather than a symlink, so it reads the same on every OS and tool.
 - **Agent memory** = Claude Code auto-memory; skim `/memory` after a big refactor.
 - **Context hygiene** = `/compact` at the ~50% gate, `/clear` when switching tasks.

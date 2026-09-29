@@ -10,7 +10,7 @@ here — this file records decisions, not options.)
 | Use | Value | Notes |
 |-----|-------|-------|
 | Site accent | `#7C8CFF` (rgb 124 140 255) | Periwinkle blue, chosen 2026-06-01 (was gold) |
-| Boojy Notes | `#A4CACE` | Soft teal |
+| Boojy Notes | `#8FC1C6` | Misty teal, two steps deeper than the original `#A4CACE` (2026-09-14; the app draws one mark teal in both themes, and the wordmark N with it) |
 | Boojy Audio | `#4A9EF5` | Blue |
 | Boojy Design | `#FFA500` | Orange (matches the Design wordmark badge `#E89940`) |
 | Boojy Video | — | Unassigned — app not started |
