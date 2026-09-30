@@ -13,18 +13,14 @@ Process and conventions shared by **all** Boojy repos. Applies to every repo und
 The dividing line: **committed + must-follow → a file; incidental + probabilistic → agent memory.**
 A critical rule must never live *only* in agent memory.
 
-- **`AGENTS.md`** (this file + each repo's) — always-true rules. Read every session.
-- **`.claude/rules/*.md`** — per-area gotchas + durable facts, one topic per file.
-- **`docs/BACKLOG.md`** (per-app repos) — the **one planning file**: direction, what's next, known
-  issues, someday items, and the decisions behind them. Shipped work leaves it for `CHANGELOG.md`.
-  No `dreams.md`, no roadmap file, no feature tracker. Optional alongside it: `ARCHITECTURE.md`,
-  `SPEC-*.md` (binding constraints), `archive/`, `private/` (gitignored), `reviews/` (dated
-  reports), and a root `FEATURES.md` tour for a user-facing app.
-  The suite-umbrella `docs/` is different — it holds cross-suite references: `BRAND.md`,
-  `REPO_TEMPLATE.md`, and `private/` (gitignored).
-- **agent memory** — incidental cross-session learnings (Claude Code: auto-memory; see the
-  Claude Code section).
-- **`git log`** — the history. No session ledger.
+- **`AGENTS.md`** (this file + each repo's): always-true rules, read every session.
+- **`.claude/rules/*.md`**: per-area gotchas, one topic per file.
+- **`docs/BACKLOG.md`** (per app): the **one planning file**: priority, known bugs, what's next,
+  decisions. Shipped work leaves it for `CHANGELOG.md`. No roadmap, dreams or tracker files.
+  Other docs only when they earn their place (`ARCHITECTURE.md`, specs, dated `reviews/` that
+  are deleted once triaged). Fewer, shorter docs beat complete ones.
+- **Agent memory**: incidental cross-session learnings.
+- **`git log`**: the history. No session ledger.
 
 ## Changelog workflow
 
@@ -66,18 +62,18 @@ in the suite root `README.md` (the one cross-suite status; there is no separate 
 
 ## Working preferences
 
-- **Commits:** professional messages describing the change. **No "Generated with Claude Code" /
-  AI-attribution lines.**
-- **Don't auto-start dev servers** (`pnpm dev`, `vite`, foreground `flutter run`) — Tyr runs his own
-  localhost.
-- **Prefer simple, minimal implementations** first; add complexity only when explicitly asked.
-- **No automatic test runs** unless asked — gates run on edit (hook) and in CI.
+- **Commits and PRs carry AI attribution, for transparency:** a `Co-Authored-By:` trailer naming
+  the model (e.g. `Claude Opus 5.5 <noreply@anthropic.com>`) and "🤖 Generated with Claude Code"
+  at the end of PR descriptions. Messages describe the change; no competitor product names.
+- **Don't auto-start dev servers** (`pnpm dev`, `vite`, foreground `flutter run`): Tyr runs his
+  own. Check new UI another way (e.g. a headless render) before handing it over.
+- **Prefer simple, minimal implementations**, and when pruning docs or features, lean towards
+  cutting: git history keeps what's deleted.
+- **Test before handing over:** run the gates and tests scoped to the change locally; the full
+  matrix runs in CI.
 
-## Claude Code–specific
+## Claude Code
 
-Only applies when the agent is Claude Code; other agents can skip this section.
-
-- **Loading:** Claude Code walks up the directory tree and loads this file automatically alongside
-  the repo's own. In every repo, `CLAUDE.md` is a one-line file ("Read AGENTS.md before taking any action in this repo.") rather than a symlink, so it reads the same on every OS and tool.
-- **Agent memory** = Claude Code auto-memory; skim `/memory` after a big refactor.
-- **Context hygiene** = `/compact` at the ~50% gate, `/clear` when switching tasks.
+Claude Code loads this file automatically alongside the repo's own. In every repo `CLAUDE.md` is
+a one-line pointer to `AGENTS.md` (not a symlink). Agent memory is Claude Code auto-memory; the
+context gate above means `/compact` at ~50% and `/clear` between tasks.
