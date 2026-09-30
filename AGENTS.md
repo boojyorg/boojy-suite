@@ -25,8 +25,10 @@ A critical rule must never live *only* in agent memory.
 ## Changelog workflow
 
 Update `CHANGELOG.md` as you go — entries under a top `## Unreleased` section, categorised
-`### Bug Fixes` / `### Features` / `### Improvements`. On release, rename `## Unreleased` →
-`## vX.Y.Z — YYYY-MM-DD` and add a fresh empty `## Unreleased`.
+`### Bug Fixes` / `### Features` / `### Improvements`. **Each entry is 1–2 lines saying what the
+user sees**; design reasoning goes in BACKLOG decisions or a rules file, not the changelog. On
+release, rename `## Unreleased` → `## vX.Y.Z — YYYY-MM-DD` and add a fresh empty `## Unreleased`.
+Older releases can be condensed to short highlights that link to the full file at a release tag.
 
 ## Release process (skeleton — repo specifics stay local)
 
