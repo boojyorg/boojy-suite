@@ -35,7 +35,8 @@ stacks allow. Decided facts:
   one-off glyphs where a Lucide icon exists.
 - **Reference implementation: Boojy Design.** Its component setup (Radix primitives + Tailwind +
   CVA, documented in Storybook) is the pattern the other web surfaces adopt — Design is where a
-  shared convention lands first, then Notes and boojy-web follow. A shared component package for
+  shared convention lands first, then Notes and boojy-web follow. *(Design is on hold from 2026-10;
+  where a convention lands first meanwhile is undecided.)* A shared component package for
   the three React surfaces is the eventual goal; until it exists, copy the Design pattern rather
   than inventing a parallel one.
 - **Audio mirrors, it doesn't import.** Flutter can't consume the React components, so Audio
@@ -51,8 +52,9 @@ Every app's top bar follows the same grammar:
 - **The project/document name (top-centre) opens the document menu** — file-level actions
   (rename, save/export, recent files).
 
-Boojy Design is the reference implementation (tracked in its backlog); Audio and Notes retrofit
-once the pattern is proven there.
+Boojy Design was to be the reference implementation (tracked in its backlog), with Audio and Notes
+retrofitting after. **Open:** Design is on hold from 2026-10, so which app builds it first is
+undecided.
 
 ## Name & handles (the brand spine)
 

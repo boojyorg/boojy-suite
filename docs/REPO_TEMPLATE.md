@@ -79,5 +79,3 @@ Apply on a branch; green gates before commit; never commit to the default branch
   Same *slots*, different *fill* — don't manufacture files for symmetry.
 - **Delegator exception.** A repo whose real app lives in a subfolder (boojy-web → `website/`) keeps
   the kit at the repo root; its source, and some docs, live in the sub-app folder.
-- **boojy-audio** still carries the older shape (`dreams.md`, `docs/ROADMAP.md`, `FEATURE_TRACKER.md`,
-  `IDEAS.md`, `plans/`). It moves to this shape when development resumes, not before.
