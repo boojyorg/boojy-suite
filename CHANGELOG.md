@@ -2,6 +2,15 @@
 
 Decision and structure changes to the suite-level docs. Each app keeps its own `CHANGELOG.md`.
 
+## 2026-10-01
+
+### Improvements
+- **Boojy Design is on hold** until Notes and Audio are both in Beta: private repo, not online
+  (`README.md`, `VISION.md` §2, §3, §5, `docs/BRAND.md`). `VISION.md` §2 gains the matching
+  exception to "repos are public". Where the top-bar contract is built first is now open.
+- **`VISION.md` §0 is the current position**, not three stacked refresh logs (git history keeps
+  them; their decisions are already in the body). `docs/REPO_TEMPLATE.md` no longer says Audio has the old doc shape.
+
 ## 2026-09-29
 
 ### Improvements
