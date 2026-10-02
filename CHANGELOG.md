@@ -8,6 +8,7 @@ Decision and structure changes to the suite-level docs. Each app keeps its own `
 - **Cloud principles** (`VISION.md` §7): local-first mirror, end-to-end encrypted, 500 MB free that
   never shrinks, no subscription for now, your own storage always an option, and Boojy must work
   with every Boojy server off. Cloud work starts after the Notes Beta (`README.md`, §0, §3, §5, §8).
+- **Selective sync is a version-one principle** (`VISION.md` §7): you pick which folders sync.
 
 ## 2026-10-01
 
