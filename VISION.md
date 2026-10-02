@@ -12,7 +12,7 @@
   the focus. **Boojy Design is on hold** until both are in Beta: its repo is private and it isn't
   online.
 - **The apps stay free forever**, including commercial use, and local use never needs an account.
-- **Boojy Cloud is a possible future service, not a current product** (§7).
+- **Boojy Cloud is planned, not a current product:** work starts after the Notes Beta (§7).
 
 How the vision got here (the 2026-06, 2026-08 and 2026-09 refreshes) is in git history
 (`git log -p VISION.md`); the decisions themselves are in the sections below.
@@ -57,7 +57,7 @@ Ordered by release order: **Notes → Audio → Design → Video.**
 - **Drawing/illustration** → lives inside **Boojy Design** (the former "Boojy Draw").
 - **Animation** → planned **future feature of Boojy Design**, not a separate "Boojy Animate" app.
 - **Music notation / scoring ("Score")** → **possible future feature of Boojy Audio, or a standalone app — post-v1.0 Audio only.** Not in active development.
-- **Cloud sync ("Boojy Cloud")** → **a future possibility, not a current product.** The 2026 Supabase + R2 service was wound down (the private repo stays). If built, it arrives app by app, with no date promised — see §7.
+- **Cloud sync ("Boojy Cloud")** → **planned, not a current product.** Work starts after the Notes Beta, Notes first; the principles are in §7. (The 2026 Supabase + R2 service was wound down; the private repo stays.)
 
 ---
 
@@ -96,7 +96,7 @@ Rather than fixed month numbers, priorities follow the release order: **Notes �
 - **Boojy Video** moves out of backlog (last in the release order).
 - **Animation** in Boojy Design.
 - **Score** decision: feature of Boojy Audio vs. standalone app — evaluated only after Boojy Audio reaches v1.0.
-- **Boojy Cloud** — a possible future service, added app by app if it is built; no date (§7).
+- **Boojy Cloud** — after the Notes Beta: Notes first, then other apps join (§7).
 
 ---
 
@@ -118,16 +118,51 @@ Windows, Linux, and tablet/mobile builds remain a "between v0.5 and v1.0" goal p
 
 **The apps are free forever.** Every Boojy app and every editing feature is free, including commercial use — no subscriptions, paywalls, trials, or feature gating. Local use never requires an account. Every app keeps your work as ordinary files in a folder you choose, so nothing depends on a Boojy service. If support for the project itself is ever needed, it stays **optional and ethical** — donations.
 
-**Hosted storage is the one thing that could ever cost money.** **Boojy Cloud** is a possible future service, not a current product. If it is built, it would offer a small free storage allowance, and extra hosted storage could be paid for — payment covers hosting, never unlocks features. Connecting **your own cloud storage** (a Drive or iCloud folder, for example) is a separate future option. Cloud support would arrive app by app; nothing here implies it exists today or promises a date. No price or quota is set or published.
+**Hosted storage is the one thing that could ever cost money**, and for now it doesn't: Boojy Cloud
+starts free, with no paid tier.
 
-*(Decided 2026-09-07. Replaces the 2026-06-09 "no paid tier" and 2026-08-24 "free-only if it returns" decisions; the earlier Supabase + R2 service was wound down in August 2026 and the private repo is dormant.)*
+### Cloud principles (decided 2026-10-02)
+
+Boojy Cloud is planned, not built. These are the rules it's built to:
+
+- **Boojy works without Boojy.** Every app keeps working, and your files stay usable, with every
+  Boojy server switched off. Formats stay open and documented. Boojy should still be useful in 30
+  years, even with nobody maintaining it.
+- **Local-first; the cloud is a mirror.** The files on your devices are the real copy. If Boojy
+  Cloud ever stops, syncing stops but nobody loses a note: every device already has them all.
+- **End-to-end encrypted from day one.** Files and file names are encrypted on your device; Boojy
+  can't read them, so there's nothing to hand over. What the server can still see (sizes, times)
+  is stated plainly.
+- **Free, with a cap that never shrinks.** It starts at **500 MB** (tens of thousands of notes).
+  It can grow, never shrink. At the cap, sync pauses for new files; nothing is deleted.
+- **No subscription for now.** A paid storage tier is only reconsidered after the Notes Beta, once
+  sync works well and real users hit the cap. If it ever exists, it covers hosting only and comes
+  with a public running-costs page.
+- **Your own storage is always an option.** A folder synced by iCloud, Syncthing or similar keeps
+  working, on desktop and in the mobile apps' "choose a folder" setting.
+- **Never take over the computer.** Boojy never moves files, changes system settings, or syncs a
+  folder you didn't choose. Desktop defaults to local files; only the web app defaults to the
+  cloud.
+- **A couple of clicks.** Sign in with email and password (no Google or Apple sign-in), save a
+  recovery key once, done. Each other device: sign in and your notes appear.
+- **Trust you can check.** A public security write-up, a status page and a costs page; an
+  independent review before the public launch. Opening the server code so anyone can run their
+  own is the leaning, not yet decided (§8).
+
+**Order:** Notes Beta → notes.boojy.org as a real web app → Cloud alpha (Tyr only) → invited beta →
+iPad and Android apps → public. Ideas held for later: expiring end-to-end-encrypted share links for
+"send me the project" (with Audio), and Finder integration once Video makes on-demand files matter.
+
+*(Replaces the 2026-09-07 position, which allowed paid hosted storage from the start; that in turn
+replaced the 2026-06-09 and 2026-08-24 decisions. The earlier Supabase + R2 service was wound down
+in August 2026 and its private repo is dormant.)*
 
 ---
 
 ## 8. Licensing
 
 - **Apps: GPLv3** (decided). Copyleft, Blender-style — forks must stay open. The apps (Audio, Notes, Design, Web) carry a `LICENSE` of GPLv3; already-published commits stay under whatever they shipped (relicensing is forward-only). MIT was considered and rejected — copyleft keeps the suite and its forks open.
-- **Boojy Cloud:** **private** for now (tied to specific infra). If opened later, **AGPLv3** is the fit, not GPL — see reasoning below.
+- **Boojy Cloud:** **private** for now. Opening the new sync server (so anyone can self-host it) is the leaning (§7); if opened, **AGPLv3** is the fit, not GPL — see reasoning below.
 - **Trademarks:** "Boojy" name and logo protected; forks allowed under different names.
 - **Contributions: closed** (updated 2026-09-07; originally "closed during Early Access",
 2026-06-11). Boojy is a personal project and doesn't accept external code contributions or pull

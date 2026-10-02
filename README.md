@@ -19,7 +19,7 @@ Ordered by release order (Notes → Audio → Design → Video):
 | **[boojy-audio](https://github.com/boojyorg/boojy-audio)** | Cross-platform DAW — multi-track audio/MIDI, mixing, VST3 (Flutter UI + Rust engine) | GarageBand, Logic, Audition | **Early access — v0.6.0.** In active development again (2026-09-29): v0.7.0 is being finished, reliability first. Expect bugs. |
 | **boojy-design** | Web image editor — paint, shapes, text, layers | Photoshop, Procreate, Canva | **On hold — v0.4.0.** Until Notes and Audio are both in Beta. Private repo, not online. |
 | **[boojy-web](https://github.com/boojyorg/boojy-web)** | Source for [boojy.org](https://boojy.org) (Astro static) | — | **Live** |
-| **boojy-cloud** | Supabase backend (formerly Notes sync) | — | **Future possibility** — not a current product (private repo, dormant) |
+| **boojy-cloud** | Sync service (old Supabase backend, dormant) | — | **Planned** — after the Notes Beta; principles in [`VISION.md`](VISION.md) §7 (private repo) |
 
 *Status is updated on releases and when an app's state changes. Each repo's `CHANGELOG.md` is
 authoritative if this table trails, and each repo's `docs/BACKLOG.md` says what's next.*
