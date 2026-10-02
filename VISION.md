@@ -138,6 +138,9 @@ Boojy Cloud is planned, not built. These are the rules it's built to:
 - **No subscription for now.** A paid storage tier is only reconsidered after the Notes Beta, once
   sync works well and real users hit the cap. If it ever exists, it covers hosting only and comes
   with a public running-costs page.
+- **You choose what syncs, from the first version.** Pick which folders sync (say, skip an
+  archive of old lecture slides); the rest stays on that device only. Notes are tiny; slides,
+  PDFs and textbooks are what fill the cap.
 - **Your own storage is always an option.** A folder synced by iCloud, Syncthing or similar keeps
   working, on desktop and in the mobile apps' "choose a folder" setting.
 - **Never take over the computer.** Boojy never moves files, changes system settings, or syncs a
