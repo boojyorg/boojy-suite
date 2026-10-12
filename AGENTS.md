@@ -43,6 +43,10 @@ Older releases can be condensed to short highlights that link to the full file a
 Never commit straight to `main`/`master`. Branch → green the repo's gates locally → PR. **CI is the
 gate**, not just local tests. Don't bypass pre-commit hooks (`--no-verify`).
 
+**Tyr reviews and merges every PR.** An agent opens the PR, watches CI, reports the result and
+stops. Never `gh pr merge` (or `--auto`) unless Tyr says to merge that specific PR. When PRs must
+land in order, say the order and rebase the next one after each merge.
+
 **Stacked PRs:** GitHub's "MERGED" badge means *merged into its base*, which for a stacked PR is the
 previous PR's branch — **not** master. When PR1 of a stack merges, **delete its branch** so GitHub
 retargets the rest of the stack to master; before treating any stacked PR as landed, verify with
