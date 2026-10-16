@@ -2,7 +2,7 @@
 
 > **Tagline:** Creativity without limits.
 > **Mission:** Make creative tools that are free, friendly, and a joy to use — built for hobbyists, not professionals.
-> **Status as of:** 2026-10-01 · **Supersedes:** *Boojy Suite (Vision Document)* and *Boojy Suite (Early Preview)*
+> **Status as of:** 2026-10-16 · **Supersedes:** *Boojy Suite (Vision Document)* and *Boojy Suite (Early Preview)*
 
 ---
 
@@ -12,7 +12,8 @@
   the focus. **Boojy Design is on hold** until both are in Beta: its repo is private and it isn't
   online.
 - **The apps stay free forever**, including commercial use, and local use never needs an account.
-- **Boojy Cloud is planned, not a current product:** work starts after the Notes Beta (§7).
+- **Boojy Notes syncs through Dropbox first** (desktop and an Android app); **Boojy Cloud is
+  planned, not a current product**, weighed once Dropbox's limits are known (§7).
 
 How the vision got here (the 2026-06, 2026-08 and 2026-09 refreshes) is in git history
 (`git log -p VISION.md`); the decisions themselves are in the sections below.
@@ -83,7 +84,7 @@ Rather than fixed month numbers, priorities follow the release order: **Notes �
 
 **Now**
 
-- **Boojy Notes** — early access since v0.7.0; daily-use reliability and polish toward the desktop Beta.
+- **Boojy Notes** — Beta since v0.15.0; next, Dropbox sync on desktop and an Android app.
 - **Boojy Audio** — back in development (2026-09-29): finish v0.7.0, engine reliability first (the 2026-09-13 review in its `docs/reviews/`).
 - **Suite continuity groundwork** — design language + tokens in `docs/BRAND.md`, Lucide everywhere, shared UI components across the React apps (Notes / boojy.org; Design when it resumes).
 
@@ -96,7 +97,7 @@ Rather than fixed month numbers, priorities follow the release order: **Notes �
 - **Boojy Video** moves out of backlog (last in the release order).
 - **Animation** in Boojy Design.
 - **Score** decision: feature of Boojy Audio vs. standalone app — evaluated only after Boojy Audio reaches v1.0.
-- **Boojy Cloud** — after the Notes Beta: Notes first, then other apps join (§7).
+- **Boojy Cloud** — after Notes' Dropbox sync: Notes first, then other apps join (§7).
 
 ---
 
@@ -106,7 +107,7 @@ Rather than fixed month numbers, priorities follow the release order: **Notes �
 
 - **Boojy Audio** — macOS lead (Flutter cross-platform, so Windows follows); mobile/iPad later.
 - **Boojy Design** — web-first (browser), which is inherently cross-platform; tested on macOS.
-- **Boojy Notes** — desktop-first (Electron), developed on macOS; the web build is parked, mobile considerations remain in the codebase.
+- **Boojy Notes** — desktop-first (Electron), developed on macOS; next an Android app on the same editor, syncing through Dropbox; a web app after.
 
 Windows, Linux, and tablet/mobile builds remain a "between v0.5 and v1.0" goal per app, but always after the macOS build is working.
 
@@ -142,7 +143,9 @@ Boojy Cloud is planned, not built. These are the rules it's built to:
   archive of old lecture slides); the rest stays on that device only. Notes are tiny; slides,
   PDFs and textbooks are what fill the cap.
 - **Your own storage is always an option.** A folder synced by iCloud, Syncthing or similar keeps
-  working, on desktop and in the mobile apps' "choose a folder" setting.
+  working, on desktop and in the mobile apps' "choose a folder" setting. Dropbox comes first and
+  is connected directly on the phone (its app folder only); there notes stay readable Markdown,
+  and the app says plainly that Dropbox can read them.
 - **Never take over the computer.** Boojy never moves files, changes system settings, or syncs a
   folder you didn't choose. Desktop defaults to local files; only the web app defaults to the
   cloud.
@@ -152,8 +155,9 @@ Boojy Cloud is planned, not built. These are the rules it's built to:
   independent review before the public launch. Opening the server code so anyone can run their
   own is the leaning, not yet decided (§8).
 
-**Order:** Notes Beta → notes.boojy.org as a real web app → Cloud alpha (Tyr only) → invited beta →
-iPad and Android apps → public. Ideas held for later: expiring end-to-end-encrypted share links for
+**Order** (revised 2026-10-15): Notes Beta → Dropbox sync on desktop and an Android app → a web app
+(which could use Dropbox directly) → Cloud alpha (Tyr only) → invited beta → iPad app → public. Cloud
+is weighed once Dropbox's limits are known; its place against the web app is a product choice. Ideas held for later: expiring end-to-end-encrypted share links for
 "send me the project" (with Audio), and Finder integration once Video makes on-demand files matter.
 
 *(Replaces the 2026-09-07 position, which allowed paid hosted storage from the start; that in turn
