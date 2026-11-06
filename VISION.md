@@ -2,7 +2,7 @@
 
 > **Tagline:** Creativity without limits.
 > **Mission:** Make creative tools that are free, friendly, and a joy to use — built for hobbyists, not professionals.
-> **Status as of:** 2026-10-16 · **Supersedes:** *Boojy Suite (Vision Document)* and *Boojy Suite (Early Preview)*
+> **Status as of:** 2026-11-06 · **Supersedes:** *Boojy Suite (Vision Document)* and *Boojy Suite (Early Preview)*
 
 ---
 
@@ -84,7 +84,7 @@ Rather than fixed month numbers, priorities follow the release order: **Notes �
 
 **Now**
 
-- **Boojy Notes** — Beta since v0.15.0, now v0.17.0; Dropbox sync on desktop and an Android app work in testing.
+- **Boojy Notes** — Beta since v0.15.0, now v0.21.0; Dropbox sync on desktop and an Android app work in testing.
 - **Boojy Audio** — back in development (2026-09-29): finish v0.7.0, engine reliability first (the 2026-09-13 review in its `docs/reviews/`).
 - **Suite continuity groundwork** — design language + tokens in `docs/BRAND.md`, Lucide everywhere, shared UI components across the React apps (Notes / boojy.org; Design when it resumes).
 
