@@ -33,10 +33,12 @@ here — this file records decisions, not options.)
     passes behind the sun and its near half in front.
   - The files carry no glow. A surface that wants one adds a soft shadow in the sun's orange to
     the sun alone.
-  - The website carries copies in `boojy-web/website/public/images/` (`favicon.svg` and
-    `favicon-32.png` from the small form, `apple-touch-icon.png` and `og-default.png` as the full
-    mark on navy `#0D1222`, `boojy-mark.png`), and redraws the mark inline in `BoojyMark.astro`
-    so the planet can orbit. A change to the masters means re-copying those by hand.
+  - The website carries copies in `boojy-web/website/public/images/` (`favicon.svg`,
+    `favicon-32.png` and `boojy-mark.png` as the full mark, `apple-touch-icon.png` and
+    `og-default.png` as the full mark on navy `#0D1222`), and redraws the mark inline in
+    `BoojyMark.astro` so the planet can orbit. A change to the masters means re-copying those by
+    hand. Its tab icon is the full mark by choice (2026-11-15), the one exception to the
+    small-form rule above.
 
 ## Suite continuity (decided 2026-08-24)
 
