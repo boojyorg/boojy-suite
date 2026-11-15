@@ -8,6 +8,8 @@ Decision and structure changes to the suite-level docs. Each app keeps its own `
 - **A new suite mark**: the sun with one ring and one planet, redrawn from the original logo in
   the style of the Notes N. Master files in `brand/`, the rules in `docs/BRAND.md`. The website
   uses it too, from copies in its own repo.
+- **The mark loses a hairline.** A faint line showed where the ring crosses the sun's edge, most
+  visibly at large sizes. The master SVG and its PNG exports are redrawn without it.
 
 ## 2026-10-02
 
