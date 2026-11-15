@@ -23,7 +23,18 @@ here — this file records decisions, not options.)
   `boojy-web/website/public/images/`, sized by **height** in CSS so widths vary per wordmark.
 - ⚠️ Renames that only change case (e.g. `Notes-Text-Logo.png` → `notes-text-logo.png`) look fine on
   macOS but break on the Linux build — rename in two steps or via `git mv`.
-- Suite mark: `boojy-logo.svg` / `Boojy_Image_Logo.png` (favicon derives from these).
+- **Suite mark: the sun, one ring, one planet** (chosen 2026-11-15). Masters in `brand/`:
+  `boojy-mark.svg`, and `boojy-mark-small.svg` (sun and planet, no ring) for anything under
+  32 pixels, where the ring is too thin to read. The PNGs beside them are exports; redraw from
+  the SVG, never from a PNG.
+  - Sun `#FFD98A` → `#FDB52A` → `#F0940F`, ring `#D9DCE1`, planet `#B6BAC2` → `#797D87`; each
+    gradient is lit from the upper left, as the Notes N is.
+  - The ring tilts 30 degrees. The planet is always drawn over the ring; the ring's far half
+    passes behind the sun and its near half in front.
+  - The files carry no glow. A surface that wants one adds a soft shadow in the sun's orange to
+    the sun alone.
+  - The website still serves the earlier mark (`boojy-logo.svg`, `Boojy_Image_Logo.png`,
+    `favicon.png`) until its own change swaps these in.
 
 ## Suite continuity (decided 2026-08-24)
 
