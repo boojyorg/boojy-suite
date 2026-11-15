@@ -2,6 +2,13 @@
 
 Decision and structure changes to the suite-level docs. Each app keeps its own `CHANGELOG.md`.
 
+## 2026-11-15
+
+### Improvements
+- **A new suite mark**: the sun with one ring and one planet, redrawn from the original logo in
+  the style of the Notes N. Master files in `brand/`, the rules in `docs/BRAND.md`. The website
+  keeps the earlier mark until its own change.
+
 ## 2026-10-02
 
 ### Improvements
